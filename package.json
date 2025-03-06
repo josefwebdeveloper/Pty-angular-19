@@ -9,5 +9,8 @@
     "start": "ng serve",
     "build": "ng build"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@angular/cli": "^19.2.1"
+  }
 }
