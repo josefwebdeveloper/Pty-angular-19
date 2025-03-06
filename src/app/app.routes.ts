@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { PrizeComponent } from './components/prize/prize.component';
 import { AddCodeComponent } from './components/add-code/add-code.component';
-import { DoublePlayComponent } from './components/double-play/double-play.component';
+import { DoublePlayComponent } from './components/animations/double-play/double-play.component';
 import { LayoutComponent } from './components/layout/layout.component';
 
 export const routes: Routes = [
