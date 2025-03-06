@@ -1,0 +1,199 @@
+.add-code-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 120px);
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.code-header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.code-header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.code-header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.code-form {
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.code-input-container {
+  display: flex;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.code-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.code-input:focus {
+  border-color: #ffd800;
+}
+
+.scan-btn {
+  background-color: #f5f5f5;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-left: 10px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  color: #555;
+}
+
+.scan-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23555' d='M4 4h6v6H4V4M16 4h4v4h-4V4M4 16h4v4H4v-4M16 14h4v6h-4v-6M10 16h4v4h-4v-4M10 10h4v4h-4v-4M10 4h4v4h-4V4M16 10h4v2h-4v-2M4 10h4v4H4v-4'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+}
+
+.code-instructions {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.instruction-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.instruction-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffd800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.step-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.recent-entries {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.recent-entries h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entry-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.entry-code {
+  font-family: monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.entry-status {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #666;
+}
+
+.entry-status.won {
+  color: #e31837;
+}
+
+/* Diamond backgrounds */
+.diamond-bg {
+  background-color: #ffd800;
+  position: absolute;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.diamond-bg-1 {
+  width: 350px;
+  height: 350px;
+  transform: rotate(45deg);
+  top: 10%;
+  right: -200px;
+}
+
+.diamond-bg-2 {
+  width: 200px;
+  height: 200px;
+  transform: rotate(45deg);
+  bottom: 0%;
+  left: -100px;
+}

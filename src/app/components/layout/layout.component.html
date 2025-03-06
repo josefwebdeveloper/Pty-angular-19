@@ -1,0 +1,40 @@
+<div class="app-container">
+  <header class="app-header">
+    <div class="header-content">
+      <img src="/assets/kelloggs-logo.svg" alt="Kellogg's Logo" class="logo">
+      <button class="menu-button">
+        <div class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        Menu
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <nav class="nav-menu">
+    <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
+      <div class="nav-icon home-icon"></div>
+      <span>Home</span>
+    </a>
+    <a [routerLink]="['/add-code']" routerLinkActive="active" class="nav-item">
+      <div class="nav-icon add-code-icon"></div>
+      <span>Add Code</span>
+    </a>
+    <a [routerLink]="['/double-play']" routerLinkActive="active" class="nav-item">
+      <div class="nav-icon double-play-icon"></div>
+      <span>Double Play</span>
+      <span class="notification-badge">10</span>
+    </a>
+    <a [routerLink]="['/prize']" routerLinkActive="active" class="nav-item">
+      <div class="nav-icon prize-icon"></div>
+      <span>Claim Prize</span>
+      <span class="notification-badge">1</span>
+    </a>
+  </nav>
+</div>

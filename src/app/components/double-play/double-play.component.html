@@ -1,0 +1,60 @@
+<div class="animation-container">
+  <div class="logo-container">
+    <!-- Kellogg's text -->
+    <div
+      class="kelloggs-text"
+      [@logoAnimation]="currentState"
+      [ngStyle]="getCurrentState().kelloggStyle">
+      Kellogg's
+    </div>
+
+    <!-- Yellow diamond -->
+    <div
+      class="diamond"
+      [@logoAnimation]="currentState"
+      [ngStyle]="getCurrentState().diamondStyle">
+    </div>
+
+    <!-- DOUBLE text -->
+    <div
+      class="double-text"
+      [@logoAnimation]="currentState"
+      [ngStyle]="getCurrentState().doubleStyle">
+      DOUBLE
+    </div>
+
+    <!-- PLAY text -->
+    <div
+      class="play-text"
+      [@logoAnimation]="currentState"
+      [ngStyle]="getCurrentState().playStyle">
+      PLAY
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="button-group">
+      <button (click)="goToPreviousState()">Previous</button>
+      <button (click)="togglePlayPause()" [class.active]="isPlaying">
+        {{ isPlaying ? 'Pause' : 'Play' }}
+      </button>
+      <button (click)="goToNextState()">Next</button>
+    </div>
+
+    <div class="speed-control">
+      <span>Speed:</span>
+      <input
+        type="range"
+        min="500"
+        max="5000"
+        step="500"
+        [value]="animationSpeed"
+        (input)="onSpeedChange($event)">
+      <span>{{animationSpeed}}ms</span>
+    </div>
+
+    <div class="state-indicator">
+      State: {{currentState + 1}} of {{totalStates}}
+    </div>
+  </div>
+</div>
