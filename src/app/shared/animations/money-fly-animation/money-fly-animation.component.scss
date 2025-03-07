@@ -5,12 +5,13 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  overflow: visible; /* Allow bills to be visible outside container */
 }
 
 .money-wrapper {
   position: absolute;
   bottom: 30px;
-  left: 60%; /* Move the origin point more to the right so bills fly left */
+  left: 60%; /* Origin point more to the right so bills fly left */
   z-index: 10;
 }
 
@@ -19,9 +20,10 @@ img.money.money--animated {
   bottom: 0;
   width: 70px;
   height: auto;
+  transform-origin: center bottom;
   animation: money-arc var(--money-duration, 2s) ease-out forwards var(--money-delay, 0s);
-  animation-iteration-count: infinite; /* Make animation repeat */
-  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5)); /* Gold-like glow */
+  //animation-iteration-count: infinite;
+  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
 }
 
 @keyframes money-arc {
@@ -32,24 +34,32 @@ img.money.money--animated {
   10% {
     opacity: 1;
   }
-  20% {
-    /* Wider arc to the left */
-    transform: translate(calc(var(--money-to-x) * 0.3), calc(var(--money-to-y) * 0.2 - var(--arc-height, 80px) * 0.5)) rotate(72deg);
+  25% {
+    /* First quarter of the arc - bills are rising with different heights */
+    transform: translate(calc(var(--money-to-x) * 0.25),
+                        calc(var(--money-to-y) * 0.25 - var(--arc-height)))
+               rotate(90deg);
     opacity: 1;
   }
   50% {
-    /* Higher apex for a wider arc */
-    transform: translate(calc(var(--money-to-x) * 0.6), calc(var(--money-to-y) * 0.5 - var(--arc-height, 150px))) rotate(180deg);
+    /* Apex of the arc - peak height is different for each bill */
+    transform: translate(calc(var(--money-to-x) * 0.5),
+                        calc(var(--money-to-y) * 0.5 - var(--arc-height) * 1.2))
+               rotate(180deg);
     opacity: 1;
   }
-  80% {
-    /* Adjust curve for wider trajectory */
-    transform: translate(calc(var(--money-to-x) * 0.9), calc(var(--money-to-y) * 0.8 - var(--arc-height, 80px) * 0.5)) rotate(288deg);
-    opacity: 0.8;
+  75% {
+    /* Descending part of the arc */
+    transform: translate(calc(var(--money-to-x) * 0.75),
+                        calc(var(--money-to-y) * 0.75 - var(--arc-height) * 0.5))
+               rotate(270deg);
+    opacity: 1;
   }
   100% {
-    transform: translate(var(--money-to-x), var(--money-to-y)) rotate(360deg);
-    opacity: 0;
+    /* End point - bills land at different distances */
+    transform: translate(var(--money-to-x), var(--money-to-y))
+               rotate(360deg);
+    opacity: 1;
   }
 }
 
