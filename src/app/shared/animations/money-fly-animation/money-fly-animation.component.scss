@@ -1,17 +1,12 @@
 .animation-container {
   position: relative;
-  //width: 100%;
-  //height: 300px;
+
   display: flex;
-  //justify-content: center;
-  //align-items: flex-end;
+
 }
 
 .money-wrapper {
-  //position: absolute;
-  //bottom: 30px;
-  //left: 50%;
-  //transform: translateX(-50%);
+
   z-index: 10;
 }
 
@@ -45,7 +40,7 @@ img.money.money--animated {
   }
   80% {
     // Then smoothly continue along the curve
-    transform: translate(calc(var(--money-to-x) * 0.8), calc(var(--money-to-y) * 0.8 - var(--arc-height, 50px) * 0.5)) rotate(288deg);
+    transform: translate(calc(var(--money-to-x) * 0.8), calc(var(--money-to-y) * 0.8 - var(--arc-height, 120px) * 0.5)) rotate(288deg);
     opacity: 1;
   }
   100% {
