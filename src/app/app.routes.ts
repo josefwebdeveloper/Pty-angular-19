@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { PrizeComponent } from './components/prize/prize.component';
-import { AddCodeComponent } from './components/add-code/add-code.component';
-import { DoublePlayComponent } from './components/animations/double-play/double-play.component';
-import { LayoutComponent } from './components/layout/layout.component';
+import { HomeComponent } from './pages/home/home.component';
+import { PrizeComponent } from './pages/prize/prize.component';
+import { AddCodeComponent } from './pages/add-code/add-code.component';
+import { LayoutComponent } from './shared/components/layout/layout.component';
+import {DoublePlayComponent} from './pages/double-play/double-play.component';
 
 export const routes: Routes = [
   {

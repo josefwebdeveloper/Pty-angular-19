@@ -4,14 +4,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-double-play',
+  selector: 'app-double-play-animation',
   standalone: true,
   imports: [
     CommonModule,
     FormsModule
   ],
-  templateUrl: './double-play.component.html',
-  styleUrl: './double-play.component.scss',
+  templateUrl: './double-play-animation.component.html',
+  styleUrl: './double-play-animation.component.scss',
   animations: [
     trigger('kelloggsAnimation', [
       state('initial', style({
@@ -75,7 +75,7 @@ import { FormsModule } from '@angular/forms';
     ])
   ]
 })
-export class DoublePlayComponent implements OnInit, OnDestroy {
+export class DoublePlayAnimationComponent implements OnInit, OnDestroy {
   animationState: 'initial' | 'step1' | 'step2' | 'step3' | 'final' = 'initial';
   isPlaying = false;
   animationSpeed = 1.0;

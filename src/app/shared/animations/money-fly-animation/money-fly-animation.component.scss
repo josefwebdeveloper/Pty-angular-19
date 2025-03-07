@@ -1,0 +1,33 @@
+
+
+
+img.money.money--animated {
+  animation: money-x-axis var(--money-duration, 1.5s) ease-in both ,
+  money-y-axis-and-flip var(--money-duration, 1.8s) ease-out both ;
+  width: 100px;
+  height: auto;
+}
+
+@keyframes money-x-axis {
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  to {
+    left: calc(var(--money-to-x) * 1.5);
+  }
+}
+
+@keyframes money-y-axis-and-flip {
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(calc(var(--money-to-y) * 1.5)) rotate3d(1, 1, 1, 1080deg);
+  }
+}
