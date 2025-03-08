@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-prize',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './prize.component.html',
   styleUrl: './prize.component.scss'
 })

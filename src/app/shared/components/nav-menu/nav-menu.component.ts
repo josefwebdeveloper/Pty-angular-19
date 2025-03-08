@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, HostBinding, PLATFORM_ID, Inject } from '@angular/core';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Subject, fromEvent } from 'rxjs';
 import { takeUntil, debounceTime } from 'rxjs/operators';
@@ -7,7 +7,7 @@ import { takeUntil, debounceTime } from 'rxjs/operators';
 @Component({
   selector: 'app-nav-menu',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [RouterModule],
   templateUrl: './nav-menu.component.html',
   styleUrl: './nav-menu.component.scss'
 })

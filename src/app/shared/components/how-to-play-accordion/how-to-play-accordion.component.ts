@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-how-to-play-accordion',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './how-to-play-accordion.component.html',
   styleUrl: './how-to-play-accordion.component.scss',
   animations: [

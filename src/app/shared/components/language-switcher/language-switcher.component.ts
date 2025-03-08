@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-language-switcher',
-  imports: [CommonModule, TranslateModule],
+  imports: [TranslateModule],
   template: `
     <div class="language-switcher">
       <button
