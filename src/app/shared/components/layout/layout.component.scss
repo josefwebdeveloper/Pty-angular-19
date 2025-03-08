@@ -21,9 +21,18 @@
 
 .header-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 16px;
+  justify-content: space-between;
+  padding: 12px 16px;
+  
+  app-language-switcher {
+    margin-right: auto;
+    margin-left: 15px;
+  }
+  
+  .logo {
+    height: 30px;
+  }
 }
 
 .logo {

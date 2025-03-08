@@ -1,0 +1,31 @@
+{
+  "COMMON": {
+    "WELCOME": "Bienvenido a nuestra aplicación",
+    "LANGUAGE": "Idioma",
+    "ENGLISH": "Inglés",
+    "SPANISH": "Español"
+  },
+  "NAVIGATION": {
+    "HOME": "Inicio",
+    "ABOUT": "Acerca de",
+    "CONTACT": "Contacto"
+  },
+  "HOME": {
+    "TITLE": "Página de Inicio",
+    "DESCRIPTION": "Esta es la página principal de nuestra aplicación"
+  },
+  "ABOUT": {
+    "TITLE": "Sobre Nosotros",
+    "DESCRIPTION": "Aprende más sobre nuestra empresa y servicios"
+  },
+  "CONTACT": {
+    "TITLE": "Contáctanos",
+    "DESCRIPTION": "Ponte en contacto con nuestro equipo",
+    "FORM": {
+      "NAME": "Nombre",
+      "EMAIL": "Correo electrónico",
+      "MESSAGE": "Mensaje",
+      "SUBMIT": "Enviar"
+    }
+  }
+} 
