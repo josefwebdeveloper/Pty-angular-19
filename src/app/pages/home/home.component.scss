@@ -7,9 +7,11 @@
   position: relative;
   overflow: hidden;
 }
-.top-section{
+
+.top-section {
   min-height: 466px;
 }
+
 .animation-money-first-container {
   position: absolute;
   right: 50%;
@@ -24,7 +26,8 @@
   margin-bottom: 30px;
   position: relative;
   z-index: 100;
-  .prize-info{
+
+  .prize-info {
     margin-bottom: 50px;
     font-weight: 800;
     font-size: 28px;
@@ -42,6 +45,7 @@
   z-index: 1;
 
 }
+
 .welcome-message {
   margin-bottom: 30px;
 }
@@ -56,8 +60,6 @@
   text-align: center;
 
 }
-
-
 
 
 .claim-btn {
@@ -81,16 +83,19 @@
   transform: translateY(-2px);
   box-shadow: inset 0px 12px 7.2px v.$shadow-white-light, inset 0px -6px 7.2px v.$shadow-black-light;
 }
-.rombs-container{
+
+.rombs-container {
   top: 280px;
   position: absolute;
-  .rombs{
+
+  .rombs {
     width: 100%;
   }
 }
-.how-to-play{
-  margin: 10px 0 30px 0;
 
+.how-to-play {
+  margin: 10px 0 30px 0;
+  padding: 20px;
 
 }
 
@@ -106,6 +111,7 @@
     opacity: 1;
   }
 }
+
 @keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(-1000px);
@@ -118,6 +124,7 @@
     opacity: 1;
   }
 }
+
 .slide-in-left {
   -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -175,6 +182,7 @@
     opacity: 1;
   }
 }
+
 @keyframes bounce-top {
   0% {
     -webkit-transform: translateY(-45px);
