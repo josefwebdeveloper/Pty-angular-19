@@ -80,12 +80,15 @@
   box-shadow: inset 0px 12px 7.2px v.$shadow-white-light, inset 0px -6px 7.2px v.$shadow-black-light;
 }
 .rombs-container{
-  //top: 280px;
-  top: -78px;
-  position: relative;
+  top: 280px;
+  position: absolute;
   .rombs{
     width: 100%;
   }
+}
+.how-to-play{
+  margin-top: 110px;
+
 }
 
 @-webkit-keyframes slide-in-left {

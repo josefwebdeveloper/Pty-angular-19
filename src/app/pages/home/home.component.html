@@ -9,7 +9,7 @@
   </div>
 
   @if (showMascot) {
-    <div  class="prize-mascot slide-in-left" [@slideIn]="mascotState">
+    <div class="prize-mascot slide-in-left" [@slideIn]="mascotState">
       <img src="/assets/coco.svg" alt="{{ 'HOME.ALT_TEXT.MASCOT' | translate }}" class="mascot-image">
     </div>
   }
@@ -30,5 +30,7 @@
   <div class="rombs-container">
     <img src="assets/rombs-bg.png" alt="{{ 'HOME.ALT_TEXT.ROMBS' | translate }}" class="rombs">
   </div>
-  <app-how-to-play-accordion/>
+  <div class="how-to-play">
+    <app-how-to-play-accordion/>
+  </div>
 </div>
