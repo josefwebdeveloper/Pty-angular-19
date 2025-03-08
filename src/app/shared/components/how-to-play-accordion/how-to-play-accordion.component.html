@@ -1,1 +1,62 @@
-<p>how-to-play-accordion works!</p>
+<div class="how-to-play-accordion">
+  <div class="accordion-header" (click)="toggleAccordion()">
+    <h2>How to Play</h2>
+    <div class="arrow" [class.expanded]="isExpanded">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+  
+  <div class="accordion-content" [class.expanded]="isExpanded">
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <div class="step-text">
+          <h3>Peel Off the Box</h3>
+          <p>For a chance to win prizes.</p>
+        </div>
+        <div class="step-icon">
+          <img src="assets/corn.svg" alt="Cereal box icon">
+        </div>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <div class="step-text">
+          <h3>Scan Code in App</h3>
+          <p>To claim prizes.</p>
+        </div>
+        <div class="step-icon">
+          <img src="assets/phone.svg" alt="Phone scan icon">
+        </div>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <div class="step-text">
+          <h3>Then Peel in App</h3>
+          <p>For a chance to play for additional prizes!</p>
+        </div>
+        <div class="step-icon">
+          <img src="assets/bee.svg" alt="Bee mascot icon">
+        </div>
+      </div>
+    </div>
+    
+    <div class="prize-banner">
+      <div class="new-tag">NEW</div>
+      <div class="prize-text">
+        <h3>CASH PRIZE</h3>
+        <h3>EVERY MINUTE<sup>^</sup></h3>
+      </div>
+      <div class="money-icon">
+        <img src="assets/money-stack.svg" alt="Money stack icon">
+      </div>
+    </div>
+  </div>
+</div>

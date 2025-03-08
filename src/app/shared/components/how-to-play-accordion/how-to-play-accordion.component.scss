@@ -1,0 +1,145 @@
+.how-to-play-accordion {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(to right, #ffeb84, #ffc107);
+  cursor: pointer;
+  
+  h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  .arrow {
+    transition: transform 0.3s ease;
+    
+    &.expanded {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: white;
+  
+  &.expanded {
+    max-height: 1000px; // Large enough to fit content
+  }
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  
+  .step-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #c23838;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  
+  .step-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .step-text {
+    flex: 1;
+    
+    h3 {
+      margin: 0 0 5px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    p {
+      margin: 0;
+      color: #555;
+    }
+  }
+  
+  .step-icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.prize-banner {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  position: relative;
+  
+  .new-tag {
+    color: #c23838;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .prize-text {
+    h3 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+    
+    sup {
+      font-size: 12px;
+    }
+  }
+  
+  .money-icon {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    width: 120px;
+    height: 50px;
+    
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}
