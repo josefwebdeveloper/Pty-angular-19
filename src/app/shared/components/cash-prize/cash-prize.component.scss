@@ -45,12 +45,14 @@
   .tiger-image{
     margin: 0 auto;
     opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateY(100px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    will-change: transform, opacity;
 
     &.animate-in {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
+      animation: tigerSlideUp 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     }
   }
 }
@@ -65,6 +67,21 @@
   }
   100% {
     transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* New animation for tiger slide up */
+@keyframes tigerSlideUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
