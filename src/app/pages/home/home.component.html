@@ -17,14 +17,14 @@
 
     <div class="welcome-section ">
       @if (showPrizeInfo) {
-        <div class="prize-info bounce-top" [@scaleUp]="prizeInfoState">
+        <div id="prize-info-element" class="prize-info jello-horizontal" [@scaleUp]="prizeInfoState" (click)="restartJelloAnimation('prize-info-element')">
           <h2>{{ 'HOME.WON_PRIZE_LINE1' | translate:{name: user.name} }}</h2>
           <h2>{{ 'HOME.WON_PRIZE_LINE2' | translate }}</h2>
           <h2>{{ 'HOME.WON_PRIZE_LINE3' | translate }}</h2>
         </div>
 
-        <div class="claim-button-container bounce-top" [@scaleUp]="prizeInfoState">
-          <button class="btn btn-primary claim-btn">{{ 'HOME.CLAIM_PRIZE' | translate }}</button>
+        <div id="claim-button-container" class="claim-button-container jello-horizontal" [@scaleUp]="prizeInfoState">
+          <button class="btn btn-primary claim-btn" (click)="restartJelloAnimation('claim-button-container')">{{ 'HOME.CLAIM_PRIZE' | translate }}</button>
         </div>
       }
     </div>

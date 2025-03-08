@@ -78,4 +78,17 @@ export class HomeComponent {
       this.prizeInfoState = 'visible';
     }, 600);
   }
+
+  // Method to restart jello animation
+  restartJelloAnimation(elementId: string) {
+    const element = document.getElementById(elementId);
+    if (element) {
+      // Remove and re-add the animation class to restart it
+      element.classList.remove('jello-horizontal');
+      // This tiny timeout is needed to ensure the class is properly removed before adding it back
+      setTimeout(() => {
+        element.classList.add('jello-horizontal');
+      }, 10);
+    }
+  }
 }
