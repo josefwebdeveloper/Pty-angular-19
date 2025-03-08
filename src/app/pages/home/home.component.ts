@@ -5,16 +5,20 @@ import {DoublePlayAnimationComponent} from "../../shared/animations/double-play-
 import {MoneyFlyAnimationComponent} from '../../shared/animations/money-fly-animation/money-fly-animation.component';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { TranslateModule } from '@ngx-translate/core';
+import {
+  HowToPlayAccordionComponent
+} from '../../shared/components/how-to-play-accordion/how-to-play-accordion.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    RouterModule, 
-    CommonModule, 
-    DoublePlayAnimationComponent, 
+    RouterModule,
+    CommonModule,
+    DoublePlayAnimationComponent,
     MoneyFlyAnimationComponent,
-    TranslateModule
+    TranslateModule,
+    HowToPlayAccordionComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

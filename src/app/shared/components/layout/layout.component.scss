@@ -24,12 +24,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 16px;
-  
+
   app-language-switcher {
     margin-right: auto;
     margin-left: 15px;
   }
-  
+
   .logo {
     height: 30px;
   }
@@ -153,13 +153,13 @@
 
 .nav-item.add-code-item {
   position: relative;
-  background-color: v.$color-black;
   color: v.$color-white;
   z-index: 1001;
   padding: 0;
   margin-top: -10px;
   height: calc(100% + 10px);
   border-radius: 11px  11px 0 0;
+  background: radial-gradient(51.23% 63.31% at 21.01% 21.62%, #515151 0%, #000000 100%)
 }
 
 .add-code-container {
@@ -176,7 +176,6 @@
   align-items: center;
   justify-content: center;
   width: 44px;
-  background-color: v.$color-black;
   border-radius: 10px;
   margin-bottom: 5px;
   box-shadow: 0 2px 5px v.$shadow-medium;
