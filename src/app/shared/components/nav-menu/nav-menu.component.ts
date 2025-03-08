@@ -18,6 +18,7 @@ export class NavMenuComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   private readonly autoHideDelay = 3000; // 3 seconds
   private isBrowser: boolean;
+  private isAtBottom = false;
 
   constructor(@Inject(PLATFORM_ID) platformId: Object) {
     this.isBrowser = isPlatformBrowser(platformId);
@@ -36,6 +37,7 @@ export class NavMenuComponent implements OnInit, OnDestroy {
         debounceTime(100) // Debounce scroll events
       )
       .subscribe(() => {
+        this.checkScrollPosition();
         this.showNavigation();
       });
 
@@ -56,17 +58,29 @@ export class NavMenuComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 
+  private checkScrollPosition(): void {
+    // Calculate if we're at the bottom of the page (with a small buffer)
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    
+    // Consider we're at the bottom if we're within 100px of the bottom
+    this.isAtBottom = (scrollPosition + windowHeight) >= (documentHeight - 100);
+  }
+
   private showNavigation(): void {
-    // Make navigation visible
+    // Always make navigation visible
     this.isVisible = true;
     
     // Reset the auto-hide timer
     this.clearAutoHideTimer();
     
-    // Set a new timer to hide the navigation after the delay
-    this.autoHideTimer = setTimeout(() => {
-      this.isVisible = false;
-    }, this.autoHideDelay);
+    // Only set auto-hide timer if we're NOT at the bottom of the page
+    if (!this.isAtBottom) {
+      this.autoHideTimer = setTimeout(() => {
+        this.isVisible = false;
+      }, this.autoHideDelay);
+    }
   }
 
   private clearAutoHideTimer(): void {
