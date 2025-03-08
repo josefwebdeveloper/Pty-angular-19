@@ -31,7 +31,6 @@ body {
   font-weight: bold;
   border: none;
   cursor: pointer;
-  text-transform: uppercase;
   text-align: center;
   transition: all 0.3s ease;
   display: inline-block;
@@ -91,7 +90,6 @@ body {
 .animation-container {
   width: 100%;
   position: relative;
-  min-height: 200px;
 }
 
 /* Yellow diamond background common in Kellogg's branding */
