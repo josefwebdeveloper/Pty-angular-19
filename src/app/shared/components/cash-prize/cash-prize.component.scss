@@ -1,18 +1,57 @@
 .cash-prizes-container{
-  min-height: 344px;
+  min-height: 450px;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
   position: relative;
   flex-direction: column;
+  overflow: hidden;
   .cash-prize-image{
     margin: 0 auto;
     width: 60%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+
+    &.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   .money-animation-container{
     position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s ease, transform 1s ease;
+
+    &.animate-in {
+      opacity: 1;
+      transform: scale(1);
+      animation: moneyFlyIn 1.2s ease-out;
+    }
   }
   .tiger-image{
     margin: 0 auto;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+
+    &.animate-in {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+@keyframes moneyFlyIn {
+  0% {
+    transform: translateY(100%) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
 }

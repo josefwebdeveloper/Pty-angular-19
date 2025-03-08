@@ -60,36 +60,28 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class HowToPlayAccordionComponent {
-  // Accordion state
-  isExpanded: boolean = false;
-  
-  // Test bee animation state (for the test area)
+  isExpanded: boolean = true;
+
   beeState: string = 'hidden';
-  
-  // Accordion bee animation state (for the bee inside the accordion)
-  accordionBeeState: string = 'hidden';
-  
+
+  accordionBeeState: string = 'visible';
+
   toggleAccordion(): void {
     this.isExpanded = !this.isExpanded;
-    
-    // When expanding the accordion, add a delay before showing the bee
+
     if (this.isExpanded) {
-      // First reset the bee state to hidden
       this.accordionBeeState = 'hidden';
-      
-      // Then after a delay, make it visible to trigger the animation
+
       setTimeout(() => {
         this.accordionBeeState = 'visible';
-      }, 600); // Delay matches the accordion open animation duration
+      }, 600);
     } else {
-      // When closing, hide the bee immediately
       this.accordionBeeState = 'hidden';
     }
-    
+
     console.log('Accordion state changed:', this.isExpanded ? 'expanded' : 'collapsed');
   }
-  
-  // Function to toggle bee animation independently (only for the test area)
+
   toggleBeeAnimation(): void {
     this.beeState = this.beeState === 'hidden' ? 'visible' : 'hidden';
     console.log('Bee animation state:', this.beeState);
