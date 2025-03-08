@@ -1,4 +1,4 @@
-import { Component, ElementRef, AfterViewInit, ViewChild, OnDestroy } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, ViewChild, OnDestroy, NgZone } from '@angular/core';
 import { MoneyFlyAnimationComponent } from '../../animations/money-fly-animation/money-fly-animation.component';
 
 @Component({
@@ -16,9 +16,15 @@ export class CashPrizeComponent implements AfterViewInit, OnDestroy {
   @ViewChild('moneyAnimation') moneyAnimation!: ElementRef;
 
   private observers: IntersectionObserver[] = [];
+  private moneyAnimationTriggered = false;
+
+  constructor(private ngZone: NgZone) {}
 
   ngAfterViewInit() {
-    this.setupScrollObservers();
+    // Delay the setup slightly to ensure DOM is fully rendered
+    setTimeout(() => {
+      this.setupScrollObservers();
+    }, 100);
   }
 
   ngOnDestroy() {
@@ -27,10 +33,17 @@ export class CashPrizeComponent implements AfterViewInit, OnDestroy {
   }
 
   private setupScrollObservers() {
-    const options = {
+    const generalOptions = {
       root: null, // Use viewport as root
       rootMargin: '0px',
       threshold: 0.2 // Trigger when 20% of the element is visible
+    };
+
+    // Money animation needs a more specific configuration
+    const moneyOptions = {
+      root: null,
+      rootMargin: '-100px 0px', // Only trigger when fully in viewport with some margin
+      threshold: 0.5 // Require more visibility before triggering
     };
 
     // Observer for cash prize image
@@ -42,7 +55,7 @@ export class CashPrizeComponent implements AfterViewInit, OnDestroy {
           cashPrizeObserver.unobserve(entry.target);
         }
       });
-    }, options);
+    }, generalOptions);
     
     // Observer for tiger image
     const tigerObserver = new IntersectionObserver((entries) => {
@@ -53,18 +66,23 @@ export class CashPrizeComponent implements AfterViewInit, OnDestroy {
           tigerObserver.unobserve(entry.target);
         }
       });
-    }, options);
+    }, generalOptions);
     
-    // Observer for money animation
+    // Observer for money animation - with special handling
     const moneyObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in');
-          // Disconnect after animation is triggered
-          moneyObserver.unobserve(entry.target);
+        // Only trigger if intersecting AND not already triggered
+        if (entry.isIntersecting && !this.moneyAnimationTriggered) {
+          this.ngZone.run(() => {
+            this.moneyAnimationTriggered = true;
+            entry.target.classList.add('animate-in');
+            // Force a reflow to ensure animation restarts
+            void (entry.target as HTMLElement).offsetWidth;
+          });
+          // Keep observing to allow re-triggering on scroll if needed
         }
       });
-    }, options);
+    }, moneyOptions);
 
     // Start observing elements
     cashPrizeObserver.observe(this.cashPrizeImage.nativeElement);
