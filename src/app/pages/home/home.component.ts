@@ -37,10 +37,14 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class HomeComponent {
+  user = {
+    name: 'John',
+    id: 123
+  }
   showMoneyFlyAnimation = false;
   showMascot = false;
   showPrizeInfo = false;
-  
+
   // Animation state variables
   mascotState = 'hidden';
   prizeInfoState = 'hidden';
@@ -48,12 +52,12 @@ export class HomeComponent {
   onDoublePlayAnimationComplete() {
     this.showMoneyFlyAnimation = true;
   }
-  
+
   onMoneyFlyAnimationComplete() {
     // Show mascot with slide-in animation
     this.showMascot = true;
     this.mascotState = 'visible';
-    
+
     // After mascot appears, show prize info with scale-up animation
     setTimeout(() => {
       this.showPrizeInfo = true;

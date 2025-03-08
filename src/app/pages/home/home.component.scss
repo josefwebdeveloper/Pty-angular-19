@@ -1,3 +1,5 @@
+@use "../../../../public/assets/variables" as v;
+
 .home-container {
   display: flex;
   flex-direction: column;
@@ -50,33 +52,30 @@
 }
 
 
-
-
-
-
-// Claim prize button styling
-.claim-button-container {
-  margin-top: 20px;
-  text-align: center;
-}
-
 .claim-btn {
-  background-color: #d52030; // Red background
+  background-color: v.$color-red;
   color: white;
-  border: 3px solid #dda52c; // Gold border
+  border: 3px solid #dda52c;
   border-radius: 25px;
-  font-weight: bold;
-  width: 273px;
-  font-size: 1.2rem;
+  font-weight: 900;
+  width: 230px;
+  font-size: 20px;
   padding: 12px 36px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
 .claim-btn:hover, .claim-btn:focus {
-  background-color: #c31530; // Slightly darker red on hover
+  background-color: #c31530;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+.rombs-container{
+  top: 30%;
+  position: absolute;
+  .rombs{
+    width: 100%;
+  }
 }
 
 @-webkit-keyframes slide-in-left {

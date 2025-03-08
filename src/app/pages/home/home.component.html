@@ -17,7 +17,7 @@
   <div class="welcome-section ">
     @if (showPrizeInfo) {
       <div class="prize-info bounce-top" [@scaleUp]="prizeInfoState">
-        <h1><span class="name-placeholder">Alex,</span></h1>
+        <h1><span class="name-placeholder">{{user.name}}</span></h1>
         <h2>You've won<br>a prize!</h2>
       </div>
 
@@ -25,5 +25,8 @@
         <button class="btn btn-primary claim-btn">Claim Prize</button>
       </div>
     }
+  </div>
+  <div class="rombs-container">
+    <img src="assets/rombs-bg.png" alt="rombs" class="rombs">
   </div>
 </div>
