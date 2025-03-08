@@ -53,8 +53,16 @@
   padding: 20px;
   border-bottom: 1px solid #eee;
 
+  &:nth-child(3) {
+    border-bottom: none;
+  }
+
   &:last-of-type {
     border-bottom: 2px solid #eee;
+
+    &:nth-child(3) {
+      border-bottom: none;
+    }
   }
 
   .step-number {
@@ -119,7 +127,6 @@
   display: flex;
   align-items: center;
   padding: 20px;
-  background-color: #f9f9f9;
   position: relative;
 
   .new-tag {
