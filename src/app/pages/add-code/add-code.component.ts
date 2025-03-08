@@ -11,15 +11,13 @@ import { FormsModule } from '@angular/forms';
 })
 export class AddCodeComponent {
   codeInput = '';
-  
+
   submitCode() {
     console.log('Code submitted:', this.codeInput);
-    // This will be implemented in a future version
     this.codeInput = '';
   }
 
   scanCode() {
     console.log('Scanning code...');
-    // This would trigger camera functionality in a real implementation
   }
 }
