@@ -1,6 +1,5 @@
 @use "../public/assets/variables" as v;
-
-/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +7,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Lato', sans-serif;
   background-color: #f5f5f5;
   color: #333;
   overflow-x: hidden;
