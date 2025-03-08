@@ -1,0 +1,163 @@
+@use "../../../../../public/assets/variables" as v;
+
+:host {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  pointer-events: none;
+  
+  &.visible .nav-menu {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  
+  &:not(.visible) .nav-menu {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+    pointer-events: none;
+  }
+}
+
+.nav-menu {
+  position: fixed;
+  margin-bottom: 17px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 480px;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  z-index: 1000;
+  height: 85px;
+  background: linear-gradient(86.85deg, v.$color-gold-lightest 1.57%, v.$color-gold-lightest 14.83%, v.$color-gold-light 25.64%, v.$color-gold 39.39%, v.$color-gold 48.22%, v.$color-gold-light 59.52%, v.$color-gold-lightest 74.25%, v.$color-gold-lightest 83.15%, v.$color-gold-light 95.77%);
+  box-shadow: 0 5px 20px 3px v.$shadow-gray;
+  border-radius: 15px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: auto;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: v.$color-gray-darkest;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 5px 0;
+  position: relative;
+  width: 20%;
+  text-align: center;
+  height: 100%;
+  .nav-menu-text{
+    min-height: 20px;
+    line-height: .9;
+  }
+}
+
+.nav-item.active {
+  color: v.$color-red-dark;
+}
+
+.nav-icon {
+  width: 44px;
+  height: 43px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/assets/icons/nav-icon-bg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.nav-icon img {
+  max-width: 60%;
+  max-height: 60%;
+  position: relative;
+  z-index: 1;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: 8px;
+  background-color: v.$color-red-dark;
+  color: v.$color-white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.nav-item.add-code-item {
+  position: relative;
+  color: v.$color-white;
+  z-index: 1001;
+  padding: 0;
+  margin-top: -10px;
+  height: calc(100% + 10px);
+  border-radius: 11px  11px 0 0;
+  background: radial-gradient(51.23% 63.31% at 21.01% 21.62%, #515151 0%, #000000 100%)
+}
+
+.add-code-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.add-code-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  box-shadow: 0 2px 5px v.$shadow-medium;
+}
+
+.plus {
+  font-size: 24px;
+  font-weight: bold;
+  color: v.$color-white;
+}
+
+.add-code-text {
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 17px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+// Add a triangle to the top of the add code button
+.add-code-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-radius: 0 11px 0 0;
+  border-width: 0 20px 20px 0;
+  border-color: transparent v.$color-gold-dark transparent transparent;
+}
