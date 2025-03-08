@@ -8,6 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import {
   HowToPlayAccordionComponent
 } from '../../shared/components/how-to-play-accordion/how-to-play-accordion.component';
+import {PrizesComponent} from '../../shared/components/prizes/prizes.component';
 
 @Component({
   selector: 'app-home',
@@ -17,8 +18,9 @@ import {
     DoublePlayAnimationComponent,
     MoneyFlyAnimationComponent,
     TranslateModule,
-    HowToPlayAccordionComponent
-],
+    HowToPlayAccordionComponent,
+    PrizesComponent
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   animations: [
