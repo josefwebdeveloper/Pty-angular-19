@@ -1,3 +1,5 @@
+@use "../../../../public/assets/variables" as v;
+
 .prize-container {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@
   min-height: calc(100vh - 120px);
   position: relative;
   overflow: hidden;
-  background-color: white;
+  background-color: v.$color-white;
 }
 
 .brand-header {
@@ -24,14 +26,14 @@
 }
 
 .double-play-logo {
-  background-color: #ffd800;
+  background-color: v.$color-yellow;
   font-size: 2.5rem;
   font-weight: 900;
   padding: 0 20px;
   border-radius: 5px;
   transform: perspective(40px) rotateX(5deg);
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
-  color: #000;
+  text-shadow: 2px 2px 0 v.$shadow-medium;
+  color: v.$color-black;
   letter-spacing: 1px;
   text-align: center;
   z-index: 2;
@@ -59,19 +61,19 @@
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 5px;
-  color: #333;
+  color: v.$color-gray-darkest;
 }
 
 .prize-message h2 {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #e31837;
+  color: v.$color-red-dark;
   line-height: 1.2;
   margin-top: 0;
 }
 
 .name-placeholder {
-  color: #000;
+  color: v.$color-black;
 }
 
 .prize-mascot {
@@ -98,12 +100,12 @@
 }
 
 .claim-btn {
-  background-color: #e31837;
+  background-color: v.$color-red-dark;
   font-size: 1.2rem;
   padding: 15px 50px;
   border-radius: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  border: 3px solid white;
+  box-shadow: 0 4px 10px v.$shadow-dark;
+  border: 3px solid v.$color-white;
   transform: perspective(40px) rotateX(2deg);
 }
 
@@ -116,7 +118,7 @@
 
 /* Diamond background shapes */
 .diamond-bg {
-  background-color: #ffd800;
+  background-color: v.$color-yellow;
   position: absolute;
   opacity: 0.8;
   z-index: 0;

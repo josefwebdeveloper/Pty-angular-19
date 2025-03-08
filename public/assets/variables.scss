@@ -1,5 +1,43 @@
 $global-radius: 20px;
 
-//colors
-$color-primary: #2fa6fe;
+// Brand Colors
 $color-red: #D01F3C;
+$color-red-dark: #e31837;
+$color-red-alternate: #C41E3A;
+$color-red-light: #c31530;
+
+// Yellow/Gold Colors
+$color-yellow: #ffd800;
+$color-gold: #dda52c;
+$color-gold-dark: #DCA400;
+$color-gold-light: #FDD652;
+$color-gold-lightest: #FEF0A4;
+
+// Neutral Colors
+$color-black: #000;
+$color-white: #fff;
+$color-gray-darkest: #333;
+$color-gray-darker: #555;
+$color-gray-dark: #666;
+$color-gray: #999;
+$color-gray-light: #ddd;
+$color-gray-lighter: #e6e6e6;
+$color-gray-lightest: #f5f5f5;
+$color-gray-alternate: #f8f8f8;
+
+// Functional Colors
+$color-blue: #4285f4;
+$color-blue-dark: #3367d6;
+$color-error: #ea4335;
+$color-error-dark: #d33426;
+
+// Transparency
+$shadow-light: rgba(0, 0, 0, 0.1);
+$shadow-medium: rgba(0, 0, 0, 0.2);
+$shadow-dark: rgba(0, 0, 0, 0.3);
+$shadow-darker: rgba(0, 0, 0, 0.25);
+$shadow-very-light: rgba(0, 0, 0, 0.1);
+$shadow-white-light: rgba(255, 255, 255, 0.3);
+$shadow-black-light: rgba(0, 0, 0, 0.3);
+$shadow-gold: rgba(255, 215, 0, 0.5);
+$shadow-gray: rgba(125, 125, 125, 0.35);

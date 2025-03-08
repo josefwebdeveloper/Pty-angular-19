@@ -1,3 +1,5 @@
+@use "../../../../public/assets/variables" as v;
+
 .add-code-container {
   display: flex;
   flex-direction: column;
@@ -18,12 +20,12 @@
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 8px;
-  color: #333;
+  color: v.$color-gray-darkest;
 }
 
 .code-header p {
   font-size: 1rem;
-  color: #666;
+  color: v.$color-gray-dark;
 }
 
 .code-form {
@@ -41,7 +43,7 @@
 .code-input {
   flex: 1;
   padding: 12px 15px;
-  border: 2px solid #ddd;
+  border: 2px solid v.$color-gray-light;
   border-radius: 8px;
   font-size: 1rem;
   outline: none;
@@ -49,12 +51,12 @@
 }
 
 .code-input:focus {
-  border-color: #ffd800;
+  border-color: v.$color-yellow;
 }
 
 .scan-btn {
-  background-color: #f5f5f5;
-  border: 2px solid #ddd;
+  background-color: v.$color-gray-lightest;
+  border: 2px solid v.$color-gray-light;
   border-radius: 8px;
   margin-left: 10px;
   padding: 0 15px;
@@ -63,7 +65,7 @@
   justify-content: center;
   cursor: pointer;
   font-weight: bold;
-  color: #555;
+  color: v.$color-gray-darker;
 }
 
 .scan-icon {
@@ -83,11 +85,11 @@
 }
 
 .code-instructions {
-  background-color: white;
+  background-color: v.$color-white;
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px v.$shadow-light;
   position: relative;
   z-index: 2;
 }
@@ -96,7 +98,7 @@
   font-weight: bold;
   font-size: 1.1rem;
   margin-bottom: 15px;
-  color: #333;
+  color: v.$color-gray-darkest;
 }
 
 .instruction-steps {
@@ -114,7 +116,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #ffd800;
+  background-color: v.$color-yellow;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,14 +127,14 @@
 
 .step-text {
   font-size: 0.9rem;
-  color: #666;
+  color: v.$color-gray-dark;
 }
 
 .recent-entries {
-  background-color: white;
+  background-color: v.$color-white;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px v.$shadow-light;
   position: relative;
   z-index: 2;
 }
@@ -140,7 +142,7 @@
 .recent-entries h2 {
   font-size: 1.2rem;
   margin-bottom: 15px;
-  color: #333;
+  color: v.$color-gray-darkest;
 }
 
 .entry-list {
@@ -154,7 +156,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
-  background-color: #f5f5f5;
+  background-color: v.$color-gray-lightest;
   border-radius: 8px;
 }
 
@@ -167,16 +169,16 @@
 .entry-status {
   font-size: 0.8rem;
   font-weight: bold;
-  color: #666;
+  color: v.$color-gray-dark;
 }
 
 .entry-status.won {
-  color: #e31837;
+  color: v.$color-red-dark;
 }
 
 /* Diamond backgrounds */
 .diamond-bg {
-  background-color: #ffd800;
+  background-color: v.$color-yellow;
   position: absolute;
   opacity: 0.4;
   z-index: 0;

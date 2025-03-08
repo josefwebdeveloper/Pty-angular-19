@@ -1,3 +1,5 @@
+@use "../../../../../public/assets/variables" as v;
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -5,16 +7,16 @@
   position: relative;
   max-width: 480px;
   margin: 0 auto;
-  background-color: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: v.$color-white;
+  box-shadow: 0 0 15px v.$shadow-light;
 }
 
 .app-header {
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: v.$color-white;
   z-index: 100;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px v.$shadow-light;
 }
 
 .header-content {
@@ -37,7 +39,7 @@
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
-  color: #333;
+  color: v.$color-gray-darkest;
 }
 
 .menu-icon {
@@ -53,7 +55,7 @@
   display: block;
   height: 2px;
   width: 100%;
-  background-color: #333;
+  background-color: v.$color-gray-darkest;
 }
 
 .main-content {
@@ -73,8 +75,8 @@
   padding: 0;
   z-index: 1000;
   height: 85px;
-  background: linear-gradient(86.85deg, #FEF0A4 1.57%, #FEF0A4 14.83%, #FDD652 25.64%, #FCBA20 39.39%, #FCBA20 48.22%, #FDD652 59.52%, #FEF0A4 74.25%, #FEF0A4 83.15%, #FDD652 95.77%);
-  box-shadow: 0 5px 20px 3px rgba(125, 125, 125, 0.35);
+  background: linear-gradient(86.85deg, v.$color-gold-lightest 1.57%, v.$color-gold-lightest 14.83%, v.$color-gold-light 25.64%, v.$color-gold 39.39%, v.$color-gold 48.22%, v.$color-gold-light 59.52%, v.$color-gold-lightest 74.25%, v.$color-gold-lightest 83.15%, v.$color-gold-light 95.77%);
+  box-shadow: 0 5px 20px 3px v.$shadow-gray;
   border-radius: 15px;
 }
 
@@ -84,7 +86,7 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: #333;
+  color: v.$color-gray-darkest;
   font-size: 0.75rem;
   font-weight: 500;
   padding: 5px 0;
@@ -99,7 +101,7 @@
 }
 
 .nav-item.active {
-  color: #e31837;
+  color: v.$color-red-dark;
 }
 
 .nav-icon {
@@ -127,8 +129,8 @@
   position: absolute;
   top: -8px;
   right: 8px;
-  background-color: #e31837;
-  color: white;
+  background-color: v.$color-red-dark;
+  color: v.$color-white;
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -142,8 +144,8 @@
 
 .nav-item.add-code-item {
   position: relative;
-  background-color: #000;
-  color: white;
+  background-color: v.$color-black;
+  color: v.$color-white;
   z-index: 1001;
   padding: 0;
   margin-top: -10px;
@@ -165,16 +167,16 @@
   align-items: center;
   justify-content: center;
   width: 44px;
-  background-color: #000;
+  background-color: v.$color-black;
   border-radius: 10px;
   margin-bottom: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px v.$shadow-medium;
 }
 
 .plus {
   font-size: 24px;
   font-weight: bold;
-  color: white;
+  color: v.$color-white;
 }
 
 .add-code-text {
@@ -196,5 +198,5 @@
   border-style: solid;
   border-radius: 0 11px 0 0;
   border-width: 0 20px 20px 0;
-  border-color: transparent #DCA400 transparent transparent;
+  border-color: transparent v.$color-gold-dark transparent transparent;
 }

@@ -1,3 +1,5 @@
+@use "../../../../../public/assets/variables" as v;
+
 .animation-container {
 
   .logo-container {
@@ -14,14 +16,14 @@
 
     .kelloggs-text {
       position: absolute;
-      color: #C41E3A;
+      color: v.$color-red-alternate;
       font-family: 'Brush Script MT', cursive, Arial, sans-serif;
       font-size: 60px;
       font-weight: bold;
       z-index: 3;
       opacity: 0;
       transition: all 0.5s ease-in-out;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      text-shadow: 1px 1px 2px v.$shadow-medium;
     }
 
     .diamond {
@@ -52,14 +54,14 @@
       line-height: 1.1;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: #333;
+      color: v.$color-gray-darkest;
       opacity: 0;
 
     }
 
     .play-text {
       position: absolute;
-      color: #333;
+      color: v.$color-gray-darkest;
       z-index: 2;
       opacity: 0;
       transition: all 0.5s ease-in-out;
@@ -90,8 +92,8 @@
 
       button {
         padding: 12px 40px;
-        background-color: #4285f4;
-        color: white;
+        background-color: v.$color-blue;
+        color: v.$color-white;
         border: none;
         border-radius: 4px;
         cursor: pointer;
@@ -100,14 +102,14 @@
         transition: background-color 0.2s;
 
         &:hover {
-          background-color: #3367d6;
+          background-color: v.$color-blue-dark;
         }
 
         &.active {
-          background-color: #ea4335;
+          background-color: v.$color-error;
 
           &:hover {
-            background-color: #d33426;
+            background-color: v.$color-error-dark;
           }
         }
       }
@@ -126,9 +128,9 @@
 
     .state-indicator {
       font-size: 14px;
-      color: #666;
+      color: v.$color-gray-dark;
       padding: 8px 12px;
-      background-color: #e6e6e6;
+      background-color: v.$color-gray-lighter;
       border-radius: 4px;
     }
   }
