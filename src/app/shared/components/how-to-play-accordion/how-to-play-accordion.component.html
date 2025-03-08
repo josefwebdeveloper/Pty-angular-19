@@ -1,3 +1,5 @@
+
+
 <div class="how-to-play-accordion">
   <div class="accordion-header" (click)="toggleAccordion()">
     <h2>How to Play</h2>
@@ -43,7 +45,8 @@
                   <img src="assets/phone.svg" alt="Phone scan icon">
                 }
                 @if (i === 3) {
-                  <img src="assets/bee.svg" alt="Bee mascot icon">
+                  <!-- Bee in the accordion uses its own animation state -->
+                  <img src="assets/bee.svg" alt="Bee mascot icon" [@beeSlideIn]="accordionBeeState">
                 }
               </div>
             </div>
@@ -55,7 +58,6 @@
             <h3>CASH PRIZE</h3>
             <h3>EVERY MINUTE<sup>^</sup></h3>
           </div>
-
         </div>
       }
     </div>
