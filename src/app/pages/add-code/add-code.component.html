@@ -1,48 +1,48 @@
 <div class="add-code-container">
   <div class="code-header">
-    <h1>Add Your Code</h1>
-    <p>Enter the code from your Kellogg's cereal box</p>
+    <h1>{{ 'ADD_CODE.TITLE' | translate }}</h1>
+    <p>{{ 'ADD_CODE.SUBTITLE' | translate }}</p>
   </div>
 
   <div class="code-form">
     <div class="code-input-container">
-      <input type="text" class="code-input" placeholder="Enter code (e.g., ABCD1234)" maxlength="12">
+      <input type="text" class="code-input" placeholder="{{ 'ADD_CODE.INPUT_PLACEHOLDER' | translate }}" maxlength="12">
       <button class="scan-btn">
         <div class="scan-icon"></div>
-        Scan
+        {{ 'ADD_CODE.SCAN_BUTTON' | translate }}
       </button>
     </div>
-    <button class="btn btn-primary submit-btn">Submit Code</button>
+    <button class="btn btn-primary submit-btn">{{ 'ADD_CODE.SUBMIT_BUTTON' | translate }}</button>
   </div>
 
   <div class="code-instructions">
-    <div class="instruction-title">Where to find your code:</div>
+    <div class="instruction-title">{{ 'ADD_CODE.INSTRUCTIONS.TITLE' | translate }}:</div>
     <div class="instruction-steps">
       <div class="step">
         <div class="step-number">1</div>
-        <div class="step-text">Look inside your Kellogg's cereal box</div>
+        <div class="step-text">{{ 'ADD_CODE.INSTRUCTIONS.STEP1' | translate }}</div>
       </div>
       <div class="step">
         <div class="step-number">2</div>
-        <div class="step-text">Find the 8-12 digit code printed on the package</div>
+        <div class="step-text">{{ 'ADD_CODE.INSTRUCTIONS.STEP2' | translate }}</div>
       </div>
       <div class="step">
         <div class="step-number">3</div>
-        <div class="step-text">Enter it above or scan the QR code if available</div>
+        <div class="step-text">{{ 'ADD_CODE.INSTRUCTIONS.STEP3' | translate }}</div>
       </div>
     </div>
   </div>
 
   <div class="recent-entries">
-    <h2>Recent Entries</h2>
+    <h2>{{ 'ADD_CODE.RECENT_ENTRIES.TITLE' | translate }}</h2>
     <div class="entry-list">
       <div class="entry-item">
         <div class="entry-code">PRIZE5437</div>
-        <div class="entry-status won">Won</div>
+        <div class="entry-status won">{{ 'ADD_CODE.RECENT_ENTRIES.WON' | translate }}</div>
       </div>
       <div class="entry-item">
         <div class="entry-code">KELL3219</div>
-        <div class="entry-status">Entered</div>
+        <div class="entry-status">{{ 'ADD_CODE.RECENT_ENTRIES.ENTERED' | translate }}</div>
       </div>
     </div>
   </div>

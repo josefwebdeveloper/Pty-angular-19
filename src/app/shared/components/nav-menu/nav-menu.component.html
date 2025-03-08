@@ -1,36 +1,36 @@
 <nav class="nav-menu">
   <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
     <div class="nav-icon">
-      <img src="/assets/icons/home-icon.svg" alt="Home">
+      <img src="/assets/icons/home-icon.svg" alt="{{ 'NAV_MENU.HOME.ALT' | translate }}">
     </div>
-    <span class="nav-menu-text">Home</span>
+    <span class="nav-menu-text">{{ 'NAV_MENU.HOME.LABEL' | translate }}</span>
   </a>
   <a [routerLink]="['/prizes']" routerLinkActive="active" class="nav-item">
     <div class="nav-icon">
-      <img src="/assets/icons/prizes-icon.svg" alt="Prizes">
+      <img src="/assets/icons/prizes-icon.svg" alt="{{ 'NAV_MENU.PRIZES.ALT' | translate }}">
     </div>
-    <span class="nav-menu-text">Prizes</span>
+    <span class="nav-menu-text">{{ 'NAV_MENU.PRIZES.LABEL' | translate }}</span>
   </a>
   <a [routerLink]="['/add-code']" routerLinkActive="active" class="nav-item add-code-item">
     <div class="add-code-container">
       <div class="add-code-icon">
         <span class="plus">+</span>
       </div>
-      <span class="add-code-text">Add<br>Code</span>
+      <span class="add-code-text">{{ 'NAV_MENU.ADD_CODE.LABEL' | translate }}</span>
     </div>
   </a>
   <a [routerLink]="['/double-play']" routerLinkActive="active" class="nav-item">
     <div class="nav-icon">
-      <img src="/assets/icons/k-icon.svg" alt="Double Play">
+      <img src="/assets/icons/k-icon.svg" alt="{{ 'NAV_MENU.DOUBLE_PLAY.ALT' | translate }}">
     </div>
-    <span class="nav-menu-text">Double<br>Play</span>
+    <span class="nav-menu-text">{{ 'NAV_MENU.DOUBLE_PLAY.LABEL' | translate }}</span>
     <span class="notification-badge">10</span>
   </a>
   <a [routerLink]="['/claim-prize']" routerLinkActive="active" class="nav-item">
     <div class="nav-icon">
-      <img src="/assets/icons/tigra-icon.svg" alt="Claim Prize">
+      <img src="/assets/icons/tigra-icon.svg" alt="{{ 'NAV_MENU.CLAIM_PRIZE.ALT' | translate }}">
     </div>
-    <span class="nav-menu-text">Claim<br>Prize</span>
+    <span class="nav-menu-text">{{ 'NAV_MENU.CLAIM_PRIZE.LABEL' | translate }}</span>
     <span class="notification-badge">1</span>
   </a>
 </nav>

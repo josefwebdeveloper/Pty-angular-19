@@ -10,6 +10,27 @@
     "ABOUT": "About",
     "CONTACT": "Contact"
   },
+  "NAV_MENU": {
+    "HOME": {
+      "LABEL": "Home",
+      "ALT": "Home icon"
+    },
+    "PRIZES": {
+      "LABEL": "Prizes",
+      "ALT": "Prizes icon"
+    },
+    "ADD_CODE": {
+      "LABEL": "Add Code"
+    },
+    "DOUBLE_PLAY": {
+      "LABEL": "Double Play",
+      "ALT": "Double Play icon"
+    },
+    "CLAIM_PRIZE": {
+      "LABEL": "Claim Prize",
+      "ALT": "Claim Prize icon"
+    }
+  },
   "HOME": {
     "TITLE": "Home Page",
     "DESCRIPTION": "This is the main page of our application",
@@ -43,6 +64,65 @@
       "EMAIL": "Email",
       "MESSAGE": "Message",
       "SUBMIT": "Submit"
+    }
+  },
+  "PRIZE": {
+    "TITLE": "Your Prize",
+    "DESCRIPTION": "Congratulations on winning your prize!"
+  },
+  "DOUBLE_PLAY": {
+    "TITLE": "Double Play",
+    "DESCRIPTION": "Learn about our Double Play promotion and how to participate"
+  },
+  "HOW_TO_PLAY": {
+    "TITLE": "How to Play",
+    "STEP1": {
+      "TITLE": "Peel Off the Box",
+      "DESCRIPTION": "For a chance to win prizes.",
+      "ALT": "Cereal box icon"
+    },
+    "STEP2": {
+      "TITLE": "Scan Code in App",
+      "DESCRIPTION": "To claim prizes.",
+      "ALT": "Phone scan icon"
+    },
+    "STEP3": {
+      "TITLE": "Then Peel in App",
+      "DESCRIPTION": "For a chance to play for additional prizes!",
+      "ALT": "Bee mascot icon"
+    },
+    "PRIZE_BANNER": {
+      "NEW": "NEW",
+      "LINE1": "CASH PRIZE",
+      "LINE2": "EVERY MINUTE"
+    }
+  },
+  "PRIZES": {
+    "TITLE": "Prizes",
+    "SUBTITLE": "Play for your chance to win prizes when you peel off the box and when you peel in app!",
+    "ITEMS": {
+      "COLLECT_TO_WIN": "Collect to Win On-Box Prizes",
+      "INSTANT_WIN": "Instant Win Prizes",
+      "DRAW": "Draw Prizes",
+      "APP_PRIZES": "Instant Win App Prizes"
+    }
+  },
+  "ADD_CODE": {
+    "TITLE": "Add Your Code",
+    "SUBTITLE": "Enter the code from your Kellogg's cereal box",
+    "INPUT_PLACEHOLDER": "Enter code (e.g., ABCD1234)",
+    "SCAN_BUTTON": "Scan",
+    "SUBMIT_BUTTON": "Submit Code",
+    "INSTRUCTIONS": {
+      "TITLE": "Where to find your code",
+      "STEP1": "Look inside your Kellogg's cereal box",
+      "STEP2": "Find the 8-12 digit code printed on the package",
+      "STEP3": "Enter it above or scan the QR code if available"
+    },
+    "RECENT_ENTRIES": {
+      "TITLE": "Recent Entries",
+      "WON": "Won",
+      "ENTERED": "Entered"
     }
   }
 } 

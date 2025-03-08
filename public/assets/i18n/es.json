@@ -10,6 +10,27 @@
     "ABOUT": "Acerca de",
     "CONTACT": "Contacto"
   },
+  "NAV_MENU": {
+    "HOME": {
+      "LABEL": "Inicio",
+      "ALT": "Icono de inicio"
+    },
+    "PRIZES": {
+      "LABEL": "Premios",
+      "ALT": "Icono de premios"
+    },
+    "ADD_CODE": {
+      "LABEL": "Agregar Código"
+    },
+    "DOUBLE_PLAY": {
+      "LABEL": "Doble Juego",
+      "ALT": "Icono de Doble Juego"
+    },
+    "CLAIM_PRIZE": {
+      "LABEL": "Reclamar Premio",
+      "ALT": "Icono de Reclamar Premio"
+    }
+  },
   "HOME": {
     "TITLE": "Página de Inicio",
     "DESCRIPTION": "Esta es la página principal de nuestra aplicación",
@@ -43,6 +64,65 @@
       "EMAIL": "Correo electrónico",
       "MESSAGE": "Mensaje",
       "SUBMIT": "Enviar"
+    }
+  },
+  "PRIZE": {
+    "TITLE": "Tu Premio",
+    "DESCRIPTION": "¡Felicitaciones por ganar tu premio!"
+  },
+  "DOUBLE_PLAY": {
+    "TITLE": "Doble Juego",
+    "DESCRIPTION": "Aprende sobre nuestra promoción Doble Juego y cómo participar"
+  },
+  "HOW_TO_PLAY": {
+    "TITLE": "Cómo Jugar",
+    "STEP1": {
+      "TITLE": "Despega la Caja",
+      "DESCRIPTION": "Para tener la oportunidad de ganar premios.",
+      "ALT": "Icono de caja de cereal"
+    },
+    "STEP2": {
+      "TITLE": "Escanea el Código en la App",
+      "DESCRIPTION": "Para reclamar premios.",
+      "ALT": "Icono de escaneo de teléfono"
+    },
+    "STEP3": {
+      "TITLE": "Luego Despega en la App",
+      "DESCRIPTION": "¡Para tener la oportunidad de jugar por premios adicionales!",
+      "ALT": "Icono de mascota abeja"
+    },
+    "PRIZE_BANNER": {
+      "NEW": "NUEVO",
+      "LINE1": "PREMIO EN EFECTIVO",
+      "LINE2": "CADA MINUTO"
+    }
+  },
+  "PRIZES": {
+    "TITLE": "Premios",
+    "SUBTITLE": "¡Juega para tener la oportunidad de ganar premios cuando despegues la caja y cuando despegues en la app!",
+    "ITEMS": {
+      "COLLECT_TO_WIN": "Premios de Colección en la Caja",
+      "INSTANT_WIN": "Premios de Ganancia Instantánea",
+      "DRAW": "Premios de Sorteo",
+      "APP_PRIZES": "Premios de Ganancia Instantánea en la App"
+    }
+  },
+  "ADD_CODE": {
+    "TITLE": "Agregar Tu Código",
+    "SUBTITLE": "Ingresa el código de tu caja de cereal Kellogg's",
+    "INPUT_PLACEHOLDER": "Ingresa código (ej. ABCD1234)",
+    "SCAN_BUTTON": "Escanear",
+    "SUBMIT_BUTTON": "Enviar Código",
+    "INSTRUCTIONS": {
+      "TITLE": "Dónde encontrar tu código",
+      "STEP1": "Busca dentro de tu caja de cereal Kellogg's",
+      "STEP2": "Encuentra el código de 8-12 dígitos impreso en el paquete",
+      "STEP3": "Ingrésalo arriba o escanea el código QR si está disponible"
+    },
+    "RECENT_ENTRIES": {
+      "TITLE": "Entradas Recientes",
+      "WON": "Ganado",
+      "ENTERED": "Ingresado"
     }
   }
 } 
