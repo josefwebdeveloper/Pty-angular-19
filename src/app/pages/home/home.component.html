@@ -10,23 +10,24 @@
 
   @if (showMascot) {
     <div  class="prize-mascot slide-in-left" [@slideIn]="mascotState">
-      <img src="/assets/coco.svg" alt="Coco Mascot" class="mascot-image">
+      <img src="/assets/coco.svg" alt="{{ 'HOME.ALT_TEXT.MASCOT' | translate }}" class="mascot-image">
     </div>
   }
 
   <div class="welcome-section ">
     @if (showPrizeInfo) {
       <div class="prize-info bounce-top" [@scaleUp]="prizeInfoState">
-        <h1><span class="name-placeholder">{{user.name}}</span></h1>
-        <h2>You've won<br>a prize!</h2>
+        <h2>{{ 'HOME.WON_PRIZE_LINE1' | translate:{name: user.name} }}</h2>
+        <h2>{{ 'HOME.WON_PRIZE_LINE2' | translate }}</h2>
+        <h2>{{ 'HOME.WON_PRIZE_LINE3' | translate }}</h2>
       </div>
 
       <div class="claim-button-container bounce-top" [@scaleUp]="prizeInfoState">
-        <button class="btn btn-primary claim-btn">Claim Prize</button>
+        <button class="btn btn-primary claim-btn">{{ 'HOME.CLAIM_PRIZE' | translate }}</button>
       </div>
     }
   </div>
   <div class="rombs-container">
-    <img src="assets/rombs-bg.png" alt="rombs" class="rombs">
+    <img src="assets/rombs-bg.png" alt="{{ 'HOME.ALT_TEXT.ROMBS' | translate }}" class="rombs">
   </div>
 </div>

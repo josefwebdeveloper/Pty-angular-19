@@ -4,18 +4,17 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-language-switcher',
-  standalone: true,
   imports: [CommonModule, TranslateModule],
   template: `
     <div class="language-switcher">
-      <button 
-        [class.active]="currentLang === 'en'" 
+      <button
+        [class.active]="currentLang === 'en'"
         (click)="changeLanguage('en')">
         EN
       </button>
       <span class="divider">|</span>
-      <button 
-        [class.active]="currentLang === 'es'" 
+      <button
+        [class.active]="currentLang === 'es'"
         (click)="changeLanguage('es')">
         ES
       </button>
@@ -28,7 +27,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
       gap: 5px;
       font-size: 14px;
     }
-    
+
     button {
       background: none;
       border: none;
@@ -37,11 +36,11 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
       font-weight: 500;
       color: #888;
     }
-    
+
     .divider {
       color: #ccc;
     }
-    
+
     button.active {
       color: #007bff;
       font-weight: bold;
@@ -59,4 +58,4 @@ export class LanguageSwitcherComponent {
     this.currentLang = lang;
     this.translateService.use(lang);
   }
-} 
+}

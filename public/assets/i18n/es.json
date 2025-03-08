@@ -12,7 +12,16 @@
   },
   "HOME": {
     "TITLE": "Página de Inicio",
-    "DESCRIPTION": "Esta es la página principal de nuestra aplicación"
+    "DESCRIPTION": "Esta es la página principal de nuestra aplicación",
+    "GREETING": "",
+    "WON_PRIZE_LINE1": "{{name}},",
+    "WON_PRIZE_LINE2": "Has ganado",
+    "WON_PRIZE_LINE3": "un premio!",
+    "CLAIM_PRIZE": "Reclamar Premio",
+    "ALT_TEXT": {
+      "MASCOT": "Mascota Coco",
+      "ROMBS": "Fondo decorativo"
+    }
   },
   "ABOUT": {
     "TITLE": "Sobre Nosotros",

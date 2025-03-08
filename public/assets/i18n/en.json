@@ -12,7 +12,16 @@
   },
   "HOME": {
     "TITLE": "Home Page",
-    "DESCRIPTION": "This is the main page of our application"
+    "DESCRIPTION": "This is the main page of our application",
+    "GREETING": "",
+    "WON_PRIZE_LINE1": "{{name}},",
+    "WON_PRIZE_LINE2": "You've won",
+    "WON_PRIZE_LINE3": "a prize!",
+    "CLAIM_PRIZE": "Claim Prize",
+    "ALT_TEXT": {
+      "MASCOT": "Coco Mascot",
+      "ROMBS": "Decorative background"
+    }
   },
   "ABOUT": {
     "TITLE": "About Us",

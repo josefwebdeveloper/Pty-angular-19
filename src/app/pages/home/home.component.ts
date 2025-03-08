@@ -4,11 +4,18 @@ import { CommonModule } from '@angular/common';
 import {DoublePlayAnimationComponent} from "../../shared/animations/double-play-animation/double-play-animation.component";
 import {MoneyFlyAnimationComponent} from '../../shared/animations/money-fly-animation/money-fly-animation.component';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterModule, CommonModule, DoublePlayAnimationComponent, MoneyFlyAnimationComponent],
+  imports: [
+    RouterModule, 
+    CommonModule, 
+    DoublePlayAnimationComponent, 
+    MoneyFlyAnimationComponent,
+    TranslateModule
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   animations: [
