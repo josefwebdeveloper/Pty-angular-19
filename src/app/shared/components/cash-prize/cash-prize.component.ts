@@ -17,6 +17,7 @@ export class CashPrizeComponent implements AfterViewInit, OnDestroy {
 
   private observers: IntersectionObserver[] = [];
   private moneyAnimationTriggered = false;
+  private tigerAnimationComplete = false;
 
   constructor(private ngZone: NgZone) {}
 
@@ -45,23 +46,15 @@ export class CashPrizeComponent implements AfterViewInit, OnDestroy {
       rootMargin: '-100px 0px', // Only trigger when fully in viewport with some margin
       threshold: 0.5 // Require more visibility before triggering
     };
-
-    // Observer for cash prize image
-    const cashPrizeObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in');
-          // Disconnect after animation is triggered
-          cashPrizeObserver.unobserve(entry.target);
-        }
-      });
-    }, generalOptions);
     
-    // Observer for tiger image
+    // Observer for tiger image - triggers first
     const tigerObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-in');
+          // Listen for animation end on tiger
+          const tigerElement = entry.target as HTMLElement;
+          this.listenForTigerAnimationEnd(tigerElement);
           // Disconnect after animation is triggered
           tigerObserver.unobserve(entry.target);
         }
@@ -84,12 +77,27 @@ export class CashPrizeComponent implements AfterViewInit, OnDestroy {
       });
     }, moneyOptions);
 
-    // Start observing elements
-    cashPrizeObserver.observe(this.cashPrizeImage.nativeElement);
+    // Start observing elements (don't observe cash prize yet - it will be triggered after tiger)
     tigerObserver.observe(this.tigerImage.nativeElement);
     moneyObserver.observe(this.moneyAnimation.nativeElement);
     
     // Store observers for cleanup
-    this.observers.push(cashPrizeObserver, tigerObserver, moneyObserver);
+    this.observers.push(tigerObserver, moneyObserver);
+  }
+
+  private listenForTigerAnimationEnd(tigerElement: HTMLElement) {
+    // Calculate animation duration from CSS - tiger animation takes 0.6s according to CSS
+    const tigerAnimationDuration = 600; // 600ms = 0.6s
+    
+    // When tiger animation ends, trigger cash prize animation
+    setTimeout(() => {
+      this.ngZone.run(() => {
+        this.tigerAnimationComplete = true;
+        // Now trigger the cash prize animation
+        if (this.cashPrizeImage && this.cashPrizeImage.nativeElement) {
+          this.cashPrizeImage.nativeElement.classList.add('animate-in');
+        }
+      });
+    }, tigerAnimationDuration);
   }
 }

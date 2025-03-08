@@ -9,11 +9,13 @@
     width: 60%;
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: none; /* Remove transition to use animation instead */
+    will-change: transform, opacity; /* Performance optimization */
 
     &.animate-in {
       opacity: 1;
       transform: translateY(0);
+      animation: cashPrizeAppear 0.8s ease-out forwards;
     }
   }
   
@@ -46,13 +48,13 @@
     margin: 0 auto;
     opacity: 0;
     transform: translateY(100px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition: none; /* Remove transition to use animation instead */
     will-change: transform, opacity;
 
     &.animate-in {
       opacity: 1;
       transform: translateY(0);
-      animation: tigerSlideUp 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      animation: tigerSlideUp 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     }
   }
 }
@@ -71,7 +73,7 @@
   }
 }
 
-/* New animation for tiger slide up */
+/* Animation for tiger slide up */
 @keyframes tigerSlideUp {
   0% {
     transform: translateY(100px);
@@ -82,6 +84,25 @@
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* New animation for cash prize */
+@keyframes cashPrizeAppear {
+  0% {
+    transform: translateY(30px) scale(0.9);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(10px) scale(1.05);
+    opacity: 0.7;
+  }
+  70% {
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    transform: translateY(0) scale(1);
     opacity: 1;
   }
 }
