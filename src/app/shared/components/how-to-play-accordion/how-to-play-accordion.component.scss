@@ -55,6 +55,19 @@
 
   &:nth-child(3) {
     border-bottom: none;
+
+    .step-icon {
+      position: relative;
+
+      img {
+        top: -19px;
+        height: 200px;
+        max-width: inherit;
+        position: absolute;
+        max-height: inherit;
+
+      }
+    }
   }
 
   &:last-of-type {
