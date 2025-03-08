@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, EventEmitter, Output } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -84,8 +84,7 @@ export class DoublePlayAnimationComponent implements OnInit, OnDestroy {
     'initial',  'final'
   ];
   private currentStep = 0;
-
-
+  @Output() animationComplete = new EventEmitter<void>();
 
   ngOnInit(): void {
       this.playAnimation();
@@ -125,6 +124,12 @@ export class DoublePlayAnimationComponent implements OnInit, OnDestroy {
       this.animationInterval = null;
     }
     this.isPlaying = false;
+
+    // Emit the event when animation completes
+    if (this.animationState === 'final') {
+      this.animationComplete.emit();
+
+    }
   }
 
   resetAnimation(): void {

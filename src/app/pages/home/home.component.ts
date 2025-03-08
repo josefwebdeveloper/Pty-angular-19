@@ -12,5 +12,9 @@ import {MoneyFlyAnimationComponent} from '../../shared/animations/money-fly-anim
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  showMoneyFlyAnimation = false;
 
+  onDoublePlayAnimationComplete() {
+    this.showMoneyFlyAnimation = true;
+  }
 }

@@ -1,10 +1,9 @@
 <div class="home-container">
   <div class="animation-container">
-    <app-double-play-animation/>
-    <div class="animation-money-first-container">
-    <app-money-fly-animation/>
+    <app-double-play-animation (animationComplete)="onDoublePlayAnimationComplete()"/>
+    <div class="animation-money-first-container" *ngIf="showMoneyFlyAnimation">
+      <app-money-fly-animation/>
     </div>
-
   </div>
   <div class="welcome-section">
     <div class="mascot-section">
