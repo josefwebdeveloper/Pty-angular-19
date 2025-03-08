@@ -53,16 +53,20 @@
 
 
 .claim-btn {
+  box-shadow: inset 0px 12px 7.2px rgba(255, 255, 255, 0.3), inset 0px -6px 7.2px rgba(0, 0, 0, 0.3);
+  font-family: 'Lato', serif;
+  border-radius: 25px;
   background-color: v.$color-red;
   color: white;
   border: 3px solid #dda52c;
-  border-radius: 25px;
   font-weight: 900;
   width: 230px;
   font-size: 20px;
   padding: 12px 36px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  line-height: 24px;
+  font-style: normal;
 }
 
 .claim-btn:hover, .claim-btn:focus {
