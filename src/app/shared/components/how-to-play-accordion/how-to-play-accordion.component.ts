@@ -43,7 +43,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class HowToPlayAccordionComponent {
-  isExpanded: boolean = false;
+  isExpanded: boolean = true;
   
   toggleAccordion(): void {
     this.isExpanded = !this.isExpanded;
