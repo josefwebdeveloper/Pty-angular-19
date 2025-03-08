@@ -11,29 +11,27 @@
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(194, 56, 56, 0.3);
   transition: all 0.2s ease;
-  
+
   &:hover {
-    background-color: darken(#c23838, 10%);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(194, 56, 56, 0.4);
   }
-  
+
   &:active {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(194, 56, 56, 0.3);
   }
-  
+
   // Bee button styling
   &.bee-btn {
     background-color: #f7c400;
     color: #333;
     box-shadow: 0 2px 6px rgba(247, 196, 0, 0.3);
-    
+
     &:hover {
-      background-color: darken(#f7c400, 10%);
       box-shadow: 0 4px 8px rgba(247, 196, 0, 0.4);
     }
-    
+
     &:active {
       box-shadow: 0 2px 4px rgba(247, 196, 0, 0.3);
     }

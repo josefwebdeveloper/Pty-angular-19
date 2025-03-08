@@ -1,1 +1,18 @@
-
+.cash-prizes-container{
+  min-height: 344px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  .cash-prize-image{
+    margin: 0 auto;
+    width: 60%;
+  }
+  .money-animation-container{
+    position: absolute;
+  }
+  .tiger-image{
+    margin: 0 auto;
+  }
+}

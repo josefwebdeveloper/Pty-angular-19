@@ -9,6 +9,7 @@ import {
   HowToPlayAccordionComponent
 } from '../../shared/components/how-to-play-accordion/how-to-play-accordion.component';
 import {PrizesComponent} from '../../shared/components/prizes/prizes.component';
+import {CashPrizeComponent} from '../../shared/components/cash-prize/cash-prize.component';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,8 @@ import {PrizesComponent} from '../../shared/components/prizes/prizes.component';
     MoneyFlyAnimationComponent,
     TranslateModule,
     HowToPlayAccordionComponent,
-    PrizesComponent
+    PrizesComponent,
+    CashPrizeComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
