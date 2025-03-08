@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-language-switcher',
@@ -50,12 +51,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class LanguageSwitcherComponent {
   currentLang: string;
 
-  constructor(private translateService: TranslateService) {
-    this.currentLang = this.translateService.currentLang || this.translateService.getDefaultLang() || 'en';
+  constructor(private translationService: TranslationService) {
+    this.currentLang = this.translationService.getCurrentLang();
   }
 
   changeLanguage(lang: string): void {
     this.currentLang = lang;
-    this.translateService.use(lang);
+    this.translationService.changeLang(lang);
   }
 }

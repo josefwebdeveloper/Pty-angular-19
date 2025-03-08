@@ -6,6 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TranslationService {
+  private readonly STORAGE_KEY = 'app_language';
+  
   constructor(private translateService: TranslateService) {}
 
   /**
@@ -16,10 +18,31 @@ export class TranslationService {
   }
 
   /**
-   * Change the current language
+   * Initialize language from localStorage or browser setting
+   */
+  initLanguage(): void {
+    const savedLang = localStorage.getItem(this.STORAGE_KEY);
+    
+    if (savedLang && this.isLangSupported(savedLang)) {
+      this.translateService.use(savedLang);
+    } else {
+      // Use browser language if available, otherwise default to English
+      const browserLang = this.translateService.getBrowserLang();
+      const langToUse = browserLang && this.isLangSupported(browserLang) ? browserLang : 'en';
+      this.translateService.use(langToUse);
+      // Save the detected language
+      localStorage.setItem(this.STORAGE_KEY, langToUse);
+    }
+  }
+
+  /**
+   * Change the current language and save to localStorage
    */
   changeLang(lang: string): void {
-    this.translateService.use(lang);
+    if (this.isLangSupported(lang)) {
+      this.translateService.use(lang);
+      localStorage.setItem(this.STORAGE_KEY, lang);
+    }
   }
 
   /**
