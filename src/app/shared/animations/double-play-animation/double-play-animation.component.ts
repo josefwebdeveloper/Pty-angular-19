@@ -2,13 +2,15 @@ import { Component, OnInit, OnDestroy, EventEmitter, Output } from '@angular/cor
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-double-play-animation',
   standalone: true,
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    TranslateModule
   ],
   templateUrl: './double-play-animation.component.html',
   styleUrl: './double-play-animation.component.scss',

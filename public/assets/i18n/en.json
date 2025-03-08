@@ -23,6 +23,14 @@
       "ROMBS": "Decorative background"
     }
   },
+  "ANIMATIONS": {
+    "DOUBLE_PLAY": {
+      "KELLOGGS": "Kellogg's",
+      "DOUBLE": "DOUBLE",
+      "PLAY": "PLAY",
+      "DIAMOND_ALT": "Diamond icon"
+    }
+  },
   "ABOUT": {
     "TITLE": "About Us",
     "DESCRIPTION": "Learn more about our company and services"

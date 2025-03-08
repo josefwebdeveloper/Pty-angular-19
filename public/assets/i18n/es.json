@@ -23,6 +23,14 @@
       "ROMBS": "Fondo decorativo"
     }
   },
+  "ANIMATIONS": {
+    "DOUBLE_PLAY": {
+      "KELLOGGS": "Kellogg's",
+      "DOUBLE": "DOBLE",
+      "PLAY": "JUEGO",
+      "DIAMOND_ALT": "Icono de diamante"
+    }
+  },
   "ABOUT": {
     "TITLE": "Sobre Nosotros",
     "DESCRIPTION": "Aprende más sobre nuestra empresa y servicios"
