@@ -1,11 +1,11 @@
 <div class="prizes-container" #prizesSection>
   <h2 class="prizes-title">Prizes</h2>
   <p class="prizes-subtitle">Play for your chance to win prizes when you peel off the box and when you peel in app!</p>
-  
+
   <div class="prizes-grid">
     @for (prize of prizeItems; track prize.title) {
       <div class="prize-card" [@fadeIn]="prize.state">
-        <div class="prize-icon">
+        <div appAnimateOnClick="jello-horizontal" class="prize-icon">
           <img [src]="prize.icon" [alt]="prize.title">
         </div>
         <div class="prize-label">{{ prize.title }}</div>

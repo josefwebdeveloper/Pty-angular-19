@@ -1,9 +1,11 @@
 <div class="cash-prizes-container">
-  <img src="/assets/cash-prize.png" alt="cash prize" class="cash-prize-image" #cashPrizeImage>
+  <img appAnimateOnClick="jello-horizontal" src="/assets/cash-prize.png" alt="cash prize" class="cash-prize-image" #cashPrizeImage>
 
   <div class="money-animation-container" #moneyAnimation>
     <app-money-fly-animation [startAnimation]="moneyAnimationTriggered()"/>
   </div>
-
-  <img src="/assets/tiger.svg" alt="tiger" class="tiger-image" #tigerImage>
+  <div class="rombs-container">
+    <img src="assets/rombs-bg.png" alt="{{ 'HOME.ALT_TEXT.ROMBS' | translate }}" class="rombs">
+  </div>
+  <img appAnimateOnClick="jello-horizontal" src="/assets/tiger.svg" alt="tiger" class="tiger-image" #tigerImage>
 </div>

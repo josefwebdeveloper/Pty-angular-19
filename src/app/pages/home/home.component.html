@@ -10,8 +10,8 @@
     </div>
 
     @if (showMascot) {
-      <div class="prize-mascot slide-in-left" [@slideIn]="mascotState">
-        <img src="/assets/coco.svg" alt="{{ 'HOME.ALT_TEXT.MASCOT' | translate }}" class="mascot-image">
+      <div  class="prize-mascot slide-in-left" [@slideIn]="mascotState">
+        <img appAnimateOnClick="jello-horizontal" src="/assets/coco.svg" alt="{{ 'HOME.ALT_TEXT.MASCOT' | translate }}" class="mascot-image">
       </div>
     }
 

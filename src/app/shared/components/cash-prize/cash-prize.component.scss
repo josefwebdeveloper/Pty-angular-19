@@ -58,7 +58,14 @@
     }
   }
 }
+.rombs-container {
+  bottom: 100px;
+  position: absolute;
 
+  .rombs {
+    width: 100%;
+  }
+}
 
 
 @keyframes tigerSlideUp {

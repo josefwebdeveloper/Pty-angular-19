@@ -10,6 +10,7 @@ import {
 } from '../../shared/components/how-to-play-accordion/how-to-play-accordion.component';
 import {PrizesComponent} from '../../shared/components/prizes/prizes.component';
 import {CashPrizeComponent} from '../../shared/components/cash-prize/cash-prize.component';
+import {AnimateOnClickDirective} from '../../directives/animate-on-click.directive';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +22,8 @@ import {CashPrizeComponent} from '../../shared/components/cash-prize/cash-prize.
     TranslateModule,
     HowToPlayAccordionComponent,
     PrizesComponent,
-    CashPrizeComponent
+    CashPrizeComponent,
+    AnimateOnClickDirective
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

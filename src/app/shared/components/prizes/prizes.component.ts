@@ -1,11 +1,12 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import {AnimateOnClickDirective} from '../../../directives/animate-on-click.directive';
 
 @Component({
   selector: 'app-prizes',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, AnimateOnClickDirective],
   templateUrl: './prizes.component.html',
   styleUrl: './prizes.component.scss',
   animations: [
@@ -24,7 +25,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class PrizesComponent implements OnInit {
   @ViewChild('prizesSection') prizesSection!: ElementRef;
-  
+
   prizeItems = [
     {
       title: 'Collect to Win On-Box Prizes',

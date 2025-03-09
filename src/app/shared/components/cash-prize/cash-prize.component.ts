@@ -1,11 +1,15 @@
 import { Component, ElementRef, AfterViewInit, ViewChild, OnDestroy, NgZone, signal } from '@angular/core';
 import { MoneyFlyAnimationComponent } from '../../animations/money-fly-animation/money-fly-animation.component';
+import {AnimateOnClickDirective} from '../../../directives/animate-on-click.directive';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-cash-prize',
   standalone: true,
   imports: [
-    MoneyFlyAnimationComponent
+    MoneyFlyAnimationComponent,
+    AnimateOnClickDirective,
+    TranslatePipe
   ],
   templateUrl: './cash-prize.component.html',
   styleUrl: './cash-prize.component.scss'
