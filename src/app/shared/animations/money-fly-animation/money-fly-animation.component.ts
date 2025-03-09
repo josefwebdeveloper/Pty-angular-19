@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-money-fly-animation',
@@ -7,14 +7,30 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   templateUrl: './money-fly-animation.component.html',
   styleUrl: './money-fly-animation.component.scss'
 })
-export class MoneyFlyAnimationComponent implements OnInit {
+export class MoneyFlyAnimationComponent implements OnInit, OnChanges {
+  @Input() startAnimation = false;
   @Output() animationComplete = new EventEmitter<void>();
   
-  // Animation will start automatically when component is initialized
+  isAnimating = false;
+
   ngOnInit() {
-    // Animation is controlled via CSS
+    // Check if we should auto-start the animation (backwards compatibility)
+    if (this.startAnimation) {
+      this.playAnimation();
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    // Watch for changes to startAnimation input
+    if (changes['startAnimation'] && changes['startAnimation'].currentValue && !this.isAnimating) {
+      this.playAnimation();
+    }
+  }
+
+  private playAnimation() {
+    this.isAnimating = true;
+    // Animation duration is controlled via CSS - 1.8s
     // Emit the animationComplete event after animation duration
-    // The animation takes about 1.8s to complete, adding a bit more to ensure all elements are done
     setTimeout(() => {
       this.animationComplete.emit();
     }, 2000); // 2000ms = 2s

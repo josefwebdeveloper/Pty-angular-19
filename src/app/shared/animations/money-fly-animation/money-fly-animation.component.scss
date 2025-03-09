@@ -15,15 +15,20 @@
   z-index: 10;
 }
 
-img.money.money--animated {
+img.money {
   position: absolute;
   bottom: 0;
   width: 70px;
   height: auto;
   transform-origin: center center;
-  animation: money-arc var(--money-duration, 2s) cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards var(--money-delay, 0s);
-  /* animation runs only once by default */
+  opacity: 0; /* Start invisible */
+  /* No animation by default */
   filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+}
+
+/* Animation applied only when the money--animated class is added */
+img.money.money--animated {
+  animation: money-arc var(--money-duration, 2s) cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards var(--money-delay, 0s);
 }
 
 @keyframes money-arc {

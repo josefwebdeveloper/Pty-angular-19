@@ -2,7 +2,7 @@
   <img src="/assets/cash-prize.png" alt="cash prize" class="cash-prize-image" #cashPrizeImage>
 
   <div class="money-animation-container" #moneyAnimation>
-    <app-money-fly-animation/>
+    <app-money-fly-animation [startAnimation]="moneyAnimationTriggered()"/>
   </div>
 
   <img src="/assets/tiger.svg" alt="tiger" class="tiger-image" #tigerImage>

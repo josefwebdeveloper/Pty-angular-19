@@ -4,7 +4,7 @@
       <app-double-play-animation (animationComplete)="onDoublePlayAnimationComplete()"/>
       @if (showMoneyFlyAnimation) {
         <div class="animation-money-first-container">
-          <app-money-fly-animation (animationComplete)="onMoneyFlyAnimationComplete()"/>
+          <app-money-fly-animation [startAnimation]="true" (animationComplete)="onMoneyFlyAnimationComplete()"/>
         </div>
       }
     </div>
