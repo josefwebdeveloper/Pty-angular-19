@@ -1,32 +1,32 @@
+@use "../../../../../public/assets/styles/functions" as *;
+
 .animation-container {
   position: relative;
   width: 100%;
-  height: 450px; /* Increased height to accommodate higher flying money */
+  height: get-rem(450);
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  overflow: visible; /* Allow bills to be visible outside container */
+  overflow: visible;
 }
 
 .money-wrapper {
   position: absolute;
-  bottom: 30px;
-  left: 50%; /* Center origin point */
+  bottom: get-rem(30);
+  left: 50%;
   z-index: 10;
 }
 
 img.money {
   position: absolute;
   bottom: 0;
-  width: 70px;
+  width: get-rem(70);
   height: auto;
   transform-origin: center center;
-  opacity: 0; /* Start invisible */
-  /* No animation by default */
-  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+  opacity: 0;
+  filter: drop-shadow(0 0 get-rem(5) rgba(255, 215, 0, 0.5));
 }
 
-/* Animation applied only when the money--animated class is added */
 img.money.money--animated {
   animation: money-arc var(--money-duration, 2s) cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards var(--money-delay, 0s);
 }
@@ -40,38 +40,33 @@ img.money.money--animated {
     opacity: 1;
   }
   25% {
-    /* First quarter - bills start forming a wave pattern higher up */
-    transform: translate(calc(var(--money-to-x) * 0.25), 
-                        calc(var(--money-to-y) * 0.25 - var(--arc-height) * 0.9)) 
+    transform: translate(calc(var(--money-to-x) * 0.25),
+                        calc(var(--money-to-y) * 0.25 - var(--arc-height) * 0.9))
                rotate(45deg);
     opacity: 1;
   }
   50% {
-    /* Midpoint - higher apex for more dramatic arc */
-    transform: translate(calc(var(--money-to-x) * 0.5), 
-                        calc(var(--money-to-y) * 0.5 - var(--arc-height) * 1.5)) 
+    transform: translate(calc(var(--money-to-x) * 0.5),
+                        calc(var(--money-to-y) * 0.5 - var(--arc-height) * 1.5))
                rotate(25deg);
     opacity: 1;
   }
   75% {
-    /* Third quarter - continue higher wave pattern */
-    transform: translate(calc(var(--money-to-x) * 0.75), 
-                        calc(var(--money-to-y) * 0.75 - var(--arc-height) * 0.9)) 
+    transform: translate(calc(var(--money-to-x) * 0.75),
+                        calc(var(--money-to-y) * 0.75 - var(--arc-height) * 0.9))
                rotate(15deg);
     opacity: 1;
   }
   100% {
-    /* Final position - gentle wave formation */
-    transform: translate(var(--money-to-x), var(--money-to-y)) 
+    transform: translate(var(--money-to-x), var(--money-to-y))
                rotate(0deg);
     opacity: 1;
   }
 }
 
-/* Add a slight rotation effect for more visual appeal */
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(get-rem(-10)); }
 }
 
 

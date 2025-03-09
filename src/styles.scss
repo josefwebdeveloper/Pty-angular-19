@@ -19,7 +19,7 @@ body {
 /* Mobile-first design */
 .container {
   width: 100%;
-  max-width: 480px;
+  max-width: get-rem(480);
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
@@ -28,8 +28,8 @@ body {
 
 /* Button styles */
 .btn {
-  padding: 12px 24px;
-  border-radius: 25px;
+  padding: get-rem(12) get-rem(24);
+  border-radius: get-rem(25);
   font-weight: bold;
   border: none;
   cursor: pointer;

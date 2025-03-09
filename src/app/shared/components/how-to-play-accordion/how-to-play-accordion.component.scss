@@ -1,54 +1,55 @@
 @use "../../../../../public/assets/styles/variables" as v;
+@use "../../../../../public/assets/styles/functions" as *;
 
 // Test animation buttons
 .test-animation-btn {
-  padding: 10px 20px;
+  padding: get-rem(10) get-rem(20);
   background-color: #c23838;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: get-rem(8);
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(194, 56, 56, 0.3);
+  box-shadow: 0 get-rem(2) get-rem(6) rgba(194, 56, 56, 0.3);
   transition: all 0.2s ease;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(194, 56, 56, 0.4);
+    transform: translateY(get-rem(-2));
+    box-shadow: 0 get-rem(4) get-rem(8) rgba(194, 56, 56, 0.4);
   }
 
   &:active {
     transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(194, 56, 56, 0.3);
+    box-shadow: 0 get-rem(2) get-rem(4) rgba(194, 56, 56, 0.3);
   }
 
   // Bee button styling
   &.bee-btn {
     background-color: #f7c400;
     color: #333;
-    box-shadow: 0 2px 6px rgba(247, 196, 0, 0.3);
+    box-shadow: 0 get-rem(2) get-rem(6) rgba(247, 196, 0, 0.3);
 
     &:hover {
-      box-shadow: 0 4px 8px rgba(247, 196, 0, 0.4);
+      box-shadow: 0 get-rem(4) get-rem(8) rgba(247, 196, 0, 0.4);
     }
 
     &:active {
-      box-shadow: 0 2px 4px rgba(247, 196, 0, 0.3);
+      box-shadow: 0 get-rem(2) get-rem(4) rgba(247, 196, 0, 0.3);
     }
   }
 }
 
 .how-to-play-accordion {
-  border-radius: 20px;
+  border-radius: get-rem(20);
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  margin: 0 auto 20px;
+  box-shadow: 0 get-rem(4) get-rem(15) rgba(0, 0, 0, 0.15);
+  margin: 0 auto get-rem(20);
   font-family: Arial, sans-serif;
-  max-width: 650px;
+  max-width: get-rem(650);
   background-color: white;
 
   &:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 get-rem(6) get-rem(20) rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -56,7 +57,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: get-rem(15) get-rem(20);
   cursor: pointer;
   user-select: none;
   background: linear-gradient(86.85deg, #FEF0A4 1.57%, #FEF0A4 14.83%, #FDD652 25.64%, #FCBA20 39.39%, #FCBA20 48.22%, #FDD652 59.52%, #FEF0A4 74.25%, #FEF0A4 83.15%, #FDD652 95.77%);
@@ -68,7 +69,7 @@
 
   h2 {
     margin: 0;
-    font-size: 24px;
+    font-size: get-rem(24);
     font-weight: bold;
     color: #222;
   }
@@ -91,8 +92,8 @@
 .step {
   display: flex;
   align-items: flex-start;
-  padding: 20px;
-  border-bottom: 1px solid #eee;
+  padding: get-rem(20);
+  border-bottom: get-rem(1) solid #eee;
 
   &:nth-child(3) {
     border-bottom: none;
@@ -102,8 +103,8 @@
       overflow: visible;
 
       img {
-        top: -19px;
-        height: 200px;
+        top: get-rem(-19);
+        height: get-rem(200);
         max-width: inherit;
         position: absolute;
         max-height: inherit;
@@ -113,7 +114,7 @@
   }
 
   &:last-of-type {
-    border-bottom: 2px solid #eee;
+    border-bottom: get-rem(2) solid #eee;
 
     &:nth-child(3) {
       border-bottom: none;
@@ -124,16 +125,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 36px;
-    height: 36px;
+    width: get-rem(36);
+    height: get-rem(36);
     border-radius: 50%;
     background-color: #c23838;
     color: white;
     font-weight: bold;
-    font-size: 20px;
-    margin-right: 15px;
+    font-size: get-rem(20);
+    margin-right: get-rem(15);
     flex-shrink: 0;
-    box-shadow: 0 2px 6px rgba(194, 56, 56, 0.3);
+    box-shadow: 0 get-rem(2) get-rem(6) rgba(194, 56, 56, 0.3);
   }
 
   .step-content {
@@ -146,8 +147,8 @@
     flex: 1;
 
     h3 {
-      margin: 0 0 5px 0;
-      font-size: 18px;
+      margin: 0 0 get-rem(5) 0;
+      font-size: get-rem(18);
       font-weight: bold;
     }
 
@@ -158,8 +159,8 @@
   }
 
   .step-icon {
-    width: 100px;
-    height: 100px;
+    width: get-rem(100);
+    height: get-rem(100);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,7 +169,7 @@
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+      filter: drop-shadow(0 get-rem(2) get-rem(4) rgba(0, 0, 0, 0.1));
       transition: transform 0.2s ease;
 
       &:hover {
@@ -181,24 +182,24 @@
 .prize-banner {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: get-rem(20);
   position: relative;
 
   .new-tag {
     color: #c23838;
     font-weight: bold;
-    font-size: 18px;
-    margin-right: 10px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    font-size: get-rem(18);
+    margin-right: get-rem(10);
+    text-shadow: 0 get-rem(1) get-rem(2) rgba(0, 0, 0, 0.05);
     position: relative;
 
     &:after {
       content: '';
       position: absolute;
-      bottom: -2px;
+      bottom: get-rem(-2);
       left: 0;
       width: 100%;
-      height: 2px;
+      height: get-rem(2);
       background-color: #c23838;
     }
   }
@@ -206,29 +207,29 @@
   .prize-text {
     h3 {
       margin: 0;
-      font-size: 22px;
+      font-size: get-rem(22);
       font-weight: bold;
       line-height: 1.2;
       text-transform: uppercase;
     }
 
     sup {
-      font-size: 12px;
+      font-size: get-rem(12);
     }
   }
 
   .money-icon {
     position: absolute;
-    right: 20px;
-    bottom: 10px;
-    width: 120px;
-    height: 50px;
+    right: get-rem(20);
+    bottom: get-rem(10);
+    width: get-rem(120);
+    height: get-rem(50);
 
     img {
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
-      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+      filter: drop-shadow(0 get-rem(3) get-rem(5) rgba(0, 0, 0, 0.2));
     }
   }
 }

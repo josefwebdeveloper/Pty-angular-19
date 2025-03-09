@@ -1,4 +1,5 @@
 @use "../../../../../public/assets/styles/variables" as v;
+@use "../../../../../public/assets/styles/functions" as *;
 
 :host {
   display: block;
@@ -17,27 +18,27 @@
 
   &:not(.visible) .nav-menu {
     opacity: 0;
-    transform: translateX(-50%) translateY(20px);
+    transform: translateX(-50%) translateY(get-rem(20));
     pointer-events: none;
   }
 }
 
 .nav-menu {
   position: fixed;
-  margin-bottom: 17px;
+  margin-bottom: get-rem(17);
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 480px;
+  max-width: get-rem(480);
   width: 95%;
   display: flex;
   justify-content: space-between;
   padding: 0;
   z-index: 1000;
-  height: 85px;
+  height: get-rem(85);
   background: linear-gradient(86.85deg, v.$color-gold-lightest 1.57%, v.$color-gold-lightest 14.83%, v.$color-gold-light 25.64%, v.$color-gold 39.39%, v.$color-gold 48.22%, v.$color-gold-light 59.52%, v.$color-gold-lightest 74.25%, v.$color-gold-lightest 83.15%, v.$color-gold-light 95.77%);
-  box-shadow: 0 5px 20px 3px v.$shadow-gray;
-  border-radius: 15px;
+  box-shadow: 0 get-rem(5) get-rem(20) get-rem(3) v.$shadow-gray;
+  border-radius: get-rem(15);
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: auto;
 }
@@ -49,32 +50,32 @@
   justify-content: center;
   text-decoration: none;
   color: v.$color-gray-darkest;
-  padding: 5px 0;
+  padding: get-rem(5) 0;
   position: relative;
   width: 20%;
   text-align: center;
   height: 100%;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 11px;
+  font-size: get-rem(12);
+  line-height: get-rem(11);
   letter-spacing: 0;
 
   .nav-menu-text{
-    min-height: 20px;
+    min-height: get-rem(20);
     line-height: .9;
   }
 }
 
 .nav-item.active {
   font-weight: 900;
-  font-size: 13px;
+  font-size: get-rem(13);
 
 }
 
 .nav-icon {
-  width: 44px;
-  height: 43px;
-  margin-bottom: 5px;
+  width: get-rem(44);
+  height: get-rem(43);
+  margin-bottom: get-rem(5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,13 +95,13 @@
 
 .notification-badge {
   position: absolute;
-  top: -8px;
-  right: 8px;
+  top: get-rem(-8);
+  right: get-rem(8);
   background-color: v.$color-red-dark;
   color: v.$color-white;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: get-rem(20);
+  height: get-rem(20);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,9 +115,9 @@
   color: v.$color-white;
   z-index: 1001;
   padding: 0;
-  margin-top: -10px;
-  height: calc(100% + 10px);
-  border-radius: 11px  11px 0 0;
+  margin-top: get-rem(-10);
+  height: calc(100% + get-rem(10));
+  border-radius: get-rem(11) get-rem(11) 0 0;
   background: radial-gradient(51.23% 63.31% at 21.01% 21.62%, #515151 0%, #000000 100%)
 }
 
@@ -133,23 +134,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  border-radius: 10px;
-  margin-bottom: 5px;
-  box-shadow: 0 2px 5px v.$shadow-medium;
+  width: get-rem(44);
+  border-radius: get-rem(10);
+  margin-bottom: get-rem(5);
+  box-shadow: 0 get-rem(2) get-rem(5) v.$shadow-medium;
 }
 
 .plus {
-  font-size: 24px;
+  font-size: get-rem(24);
   font-weight: bold;
   color: v.$color-white;
 }
 
 .add-code-text {
   font-weight: 800;
-  font-size: 19px;
-  line-height: 17px;
-  letter-spacing: 0px;
+  font-size: get-rem(19);
+  line-height: get-rem(17);
+  letter-spacing: 0;
   text-align: center;
 }
 
@@ -162,7 +163,7 @@
   width: 0;
   height: 0;
   border-style: solid;
-  border-radius: 0 11px 0 0;
-  border-width: 0 20px 20px 0;
+  border-radius: 0 get-rem(11) 0 0;
+  border-width: 0 get-rem(20) get-rem(20) 0;
   border-color: transparent v.$color-gold-dark transparent transparent;
 }

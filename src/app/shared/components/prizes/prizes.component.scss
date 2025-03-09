@@ -1,26 +1,27 @@
 @use "../../../../../public/assets/styles/variables" as v;
+@use "../../../../../public/assets/styles/functions" as *;
 
 .prizes-container {
-  //padding: 30px 16px;
+  //padding: get-rem(30) get-rem(16);
   text-align: center;
 }
 
 .prizes-title {
   text-align: start;
-  margin-bottom: 10px;
+  margin-bottom: get-rem(10);
   font-weight: 800;
-  font-size: 22px;
-  line-height: 21px;
-  letter-spacing: 0p;
+  font-size: get-rem(22);
+  line-height: get-rem(21);
+  letter-spacing: 0;
 
 }
 
 .prizes-subtitle {
-  margin-bottom: 30px;
+  margin-bottom: get-rem(30);
   color: v.$color-gray-dark;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: get-rem(16);
+  line-height: get-rem(18);
   letter-spacing: 0;
   text-align: start;
 
@@ -29,25 +30,25 @@
 .prizes-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  max-width: 600px;
+  gap: get-rem(16);
+  max-width: get-rem(600);
   margin: 0 auto;
 }
 
 .prize-card {
   background-color: v.$color-yellow;
-  border-radius: 12px;
-  padding: 10px;
+  border-radius: get-rem(12);
+  padding: get-rem(10);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 get-rem(4) get-rem(8) rgba(0, 0, 0, 0.1);
   aspect-ratio: 1 / 1;
   transition: transform 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(get-rem(-5));
   }
 }
 
@@ -57,7 +58,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: get-rem(15);
 
   img {
     max-width: 100%;
@@ -68,8 +69,8 @@
 
 .prize-label {
   font-weight: 800;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: get-rem(16);
+  line-height: get-rem(18);
   letter-spacing: 0;
   text-align: center;
 

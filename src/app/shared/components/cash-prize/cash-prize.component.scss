@@ -1,5 +1,7 @@
+@use "../../../../../public/assets/styles/functions" as *;
+
 .cash-prizes-container{
-  min-height: 450px;
+  min-height: get-rem(450);
   display: flex;
   position: relative;
   flex-direction: column;
@@ -8,7 +10,7 @@
     margin: 0 auto;
     width: 60%;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(get-rem(30));
     transition: none;
     will-change: transform, opacity;
 
@@ -20,17 +22,17 @@
   }
 
   .animation-wrapper {
-    height: 150px; /* Provide enough space for animation */
+    height: get-rem(150); /* Provide enough space for animation */
     width: 100%;
     position: relative;
-    margin: 20px 0;
+    margin: get-rem(20) 0;
   }
 
   .money-animation-container{
     position: absolute;
     width: 100%;
     opacity: 0;
-    transform: translateY(50px) scale(0.8);
+    transform: translateY(get-rem(50)) scale(0.8);
     transition: none;
     will-change: transform, opacity;
 
@@ -47,7 +49,7 @@
   .tiger-image{
     margin: 0 auto;
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(get-rem(100));
     transition: none; /* Remove transition to use animation instead */
     will-change: transform, opacity;
 
@@ -59,7 +61,7 @@
   }
 }
 .rombs-container {
-  bottom: 100px;
+  bottom: get-rem(100);
   position: absolute;
 
   .rombs {
@@ -70,7 +72,7 @@
 
 @keyframes tigerSlideUp {
   0% {
-    transform: translateY(100px);
+    transform: translateY(get-rem(100));
     opacity: 0;
   }
   30% {

@@ -1,17 +1,18 @@
 @use "../../../../public/assets/styles/variables" as v;
+@use "../../../../public/assets/styles/functions" as *;
 
 .add-code-container {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - get-rem(120));
   position: relative;
-  padding: 20px;
+  padding: get-rem(20);
   overflow: hidden;
 }
 
 .code-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: get-rem(30);
   position: relative;
   z-index: 2;
 }
@@ -19,7 +20,7 @@
 .code-header h1 {
   font-size: 1.8rem;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: get-rem(8);
   color: v.$color-gray-darkest;
 }
 
@@ -29,24 +30,24 @@
 }
 
 .code-form {
-  margin-bottom: 30px;
+  margin-bottom: get-rem(30);
   position: relative;
   z-index: 2;
 }
 
 .code-input-container {
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: get-rem(15);
   position: relative;
   flex-direction: column;
-  gap: 10px;
+  gap: get-rem(10);
 }
 
 .code-input {
   flex: 1;
-  padding: 12px 15px;
-  border: 2px solid v.$color-gray-light;
-  border-radius: 8px;
+  padding: get-rem(12) get-rem(15);
+  border: get-rem(2) solid v.$color-gray-light;
+  border-radius: get-rem(8);
   font-size: 1rem;
   outline: none;
   transition: border-color 0.3s;
@@ -58,23 +59,23 @@
 
 .scan-btn {
   background-color: v.$color-gray-lightest;
-  border: 2px solid v.$color-gray-light;
-  border-radius: 8px;
-  padding: 0 15px;
+  border: get-rem(2) solid v.$color-gray-light;
+  border-radius: get-rem(8);
+  padding: 0 get-rem(15);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 48px;
+  height: get-rem(48);
   cursor: pointer;
   font-weight: bold;
   color: v.$color-gray-darker;
 }
 
 .scan-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
+  width: get-rem(20);
+  height: get-rem(20);
+  margin-right: get-rem(5);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23555' d='M4 4h6v6H4V4M16 4h4v4h-4V4M4 16h4v4H4v-4M16 14h4v6h-4v-6M10 16h4v4h-4v-4M10 10h4v4h-4v-4M10 4h4v4h-4V4M16 10h4v2h-4v-2M4 10h4v4H4v-4'/%3E%3C/svg%3E");
   background-size: contain;
   background-position: center;
@@ -83,16 +84,16 @@
 
 .submit-btn {
   width: 100%;
-  padding: 12px;
+  padding: get-rem(12);
   font-size: 1.1rem;
 }
 
 .code-instructions {
   background-color: v.$color-white;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 12px v.$shadow-light;
+  border-radius: get-rem(12);
+  padding: get-rem(20);
+  margin-bottom: get-rem(30);
+  box-shadow: 0 get-rem(4) get-rem(12) v.$shadow-light;
   position: relative;
   z-index: 2;
 }
@@ -100,14 +101,14 @@
 .instruction-title {
   font-weight: bold;
   font-size: 1.1rem;
-  margin-bottom: 15px;
+  margin-bottom: get-rem(15);
   color: v.$color-gray-darkest;
 }
 
 .instruction-steps {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: get-rem(15);
 }
 
 .step {
@@ -116,15 +117,15 @@
 }
 
 .step-number {
-  width: 30px;
-  height: 30px;
+  width: get-rem(30);
+  height: get-rem(30);
   border-radius: 50%;
   background-color: v.$color-yellow;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  margin-right: 15px;
+  margin-right: get-rem(15);
   flex-shrink: 0;
 }
 
@@ -135,38 +136,38 @@
 
 .recent-entries {
   background-color: v.$color-white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px v.$shadow-light;
+  border-radius: get-rem(12);
+  padding: get-rem(20);
+  box-shadow: 0 get-rem(4) get-rem(12) v.$shadow-light;
   position: relative;
   z-index: 2;
 }
 
 .recent-entries h2 {
   font-size: 1.2rem;
-  margin-bottom: 15px;
+  margin-bottom: get-rem(15);
   color: v.$color-gray-darkest;
 }
 
 .entry-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: get-rem(12);
 }
 
 .entry-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px;
+  padding: get-rem(10) get-rem(15);
   background-color: v.$color-gray-lightest;
-  border-radius: 8px;
+  border-radius: get-rem(8);
 }
 
 .entry-code {
   font-family: monospace;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: get-rem(1);
 }
 
 .entry-status {
@@ -188,17 +189,17 @@
 }
 
 .diamond-bg-1 {
-  width: 350px;
-  height: 350px;
+  width: get-rem(350);
+  height: get-rem(350);
   transform: rotate(45deg);
   top: 10%;
-  right: -200px;
+  right: get-rem(-200);
 }
 
 .diamond-bg-2 {
-  width: 200px;
-  height: 200px;
+  width: get-rem(200);
+  height: get-rem(200);
   transform: rotate(45deg);
   bottom: 0%;
-  left: -100px;
+  left: get-rem(-100);
 }
