@@ -1,25 +1,28 @@
 import { Component, OnInit, OnDestroy, HostBinding, PLATFORM_ID, Inject } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import {isPlatformBrowser} from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Subject, fromEvent } from 'rxjs';
 import { takeUntil, debounceTime } from 'rxjs/operators';
 import { TranslateModule } from '@ngx-translate/core';
+import {AnimateOnClickDirective} from '../../../directives/animate-on-click.directive';
 
 @Component({
   selector: 'app-nav-menu',
   standalone: true,
-  imports: [RouterModule, TranslateModule],
+  imports: [RouterModule, TranslateModule, AnimateOnClickDirective],
   templateUrl: './nav-menu.component.html',
   styleUrl: './nav-menu.component.scss'
 })
 export class NavMenuComponent implements OnInit, OnDestroy {
   @HostBinding('class.visible') isVisible = true;
-  
+
   private autoHideTimer: any;
   private destroy$ = new Subject<void>();
   private readonly autoHideDelay = 3000; // 3 seconds
   private isBrowser: boolean;
   private isAtBottom = false;
+
+
 
   constructor(@Inject(PLATFORM_ID) platformId: Object) {
     this.isBrowser = isPlatformBrowser(platformId);
@@ -27,10 +30,10 @@ export class NavMenuComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     if (!this.isBrowser) return; // Skip for server-side rendering
-    
+
     // Show navigation initially
     this.showNavigation();
-    
+
     // Set up scroll event listener
     fromEvent(window, 'scroll')
       .pipe(
@@ -52,6 +55,7 @@ export class NavMenuComponent implements OnInit, OnDestroy {
       .subscribe(() => this.showNavigation());
   }
 
+
   ngOnDestroy(): void {
     // Clear any timers and unsubscribe from observables
     this.clearAutoHideTimer();
@@ -64,7 +68,7 @@ export class NavMenuComponent implements OnInit, OnDestroy {
     const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
-    
+
     // Consider we're at the bottom if we're within 100px of the bottom
     this.isAtBottom = (scrollPosition + windowHeight) >= (documentHeight - 100);
   }
@@ -72,10 +76,10 @@ export class NavMenuComponent implements OnInit, OnDestroy {
   private showNavigation(): void {
     // Always make navigation visible
     this.isVisible = true;
-    
+
     // Reset the auto-hide timer
     this.clearAutoHideTimer();
-    
+
     // Only set auto-hide timer if we're NOT at the bottom of the page
     if (!this.isAtBottom) {
       this.autoHideTimer = setTimeout(() => {

@@ -1,17 +1,17 @@
 <nav class="nav-menu">
-  <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
+  <a [routerLink]="['/']" routerLinkActive="active" appAnimateOnClick="jello-horizontal" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
     <div class="nav-icon">
       <img src="/assets/icons/home-icon.svg" alt="{{ 'NAV_MENU.HOME.ALT' | translate }}">
     </div>
     <span class="nav-menu-text">{{ 'NAV_MENU.HOME.LABEL' | translate }}</span>
   </a>
-  <a [routerLink]="['/prize']" routerLinkActive="active" class="nav-item">
+  <a [routerLink]="['/prize']" appAnimateOnClick="jello-horizontal" routerLinkActive="active" class="nav-item">
     <div class="nav-icon">
       <img src="/assets/icons/prizes-icon.svg" alt="{{ 'NAV_MENU.PRIZES.ALT' | translate }}">
     </div>
     <span class="nav-menu-text">{{ 'NAV_MENU.PRIZES.LABEL' | translate }}</span>
   </a>
-  <a [routerLink]="['/add-code']" routerLinkActive="active" class="nav-item add-code-item">
+  <a [routerLink]="['/add-code']" appAnimateOnClick="jello-horizontal" routerLinkActive="active" class="nav-item add-code-item">
     <div class="add-code-container">
       <div class="add-code-icon">
         <span class="plus">+</span>
@@ -19,14 +19,14 @@
       <span class="add-code-text">{{ 'NAV_MENU.ADD_CODE.LABEL' | translate }}</span>
     </div>
   </a>
-  <a [routerLink]="['/double-play']" routerLinkActive="active" class="nav-item">
+  <a [routerLink]="['/double-play']" appAnimateOnClick="jello-horizontal" routerLinkActive="active" class="nav-item">
     <div class="nav-icon">
       <img src="/assets/icons/k-icon.svg" alt="{{ 'NAV_MENU.DOUBLE_PLAY.ALT' | translate }}">
     </div>
     <span class="nav-menu-text">{{ 'NAV_MENU.DOUBLE_PLAY.LABEL' | translate }}</span>
     <span class="notification-badge">10</span>
   </a>
-  <a [routerLink]="['/claim-prize']" routerLinkActive="active" class="nav-item">
+  <a [routerLink]="['/claim-prize']" appAnimateOnClick="jello-horizontal" [animationDuration]="1500" routerLinkActive="active" class="nav-item">
     <div class="nav-icon">
       <img src="/assets/icons/tigra-icon.svg" alt="{{ 'NAV_MENU.CLAIM_PRIZE.ALT' | translate }}">
     </div>
