@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { TranslateModule } from '@ngx-translate/core';
-import { TranslationService } from '../../services/translation.service';
+import { TranslationService } from '../../../services/translation.service';
 
 @Component({
   selector: 'app-language-switcher',

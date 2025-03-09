@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { TranslationService } from './shared/services/translation.service';
+import { TranslationService } from './services/translation.service';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     // Set default language
     this.translateService.setDefaultLang('en');
-    
+
     // Initialize language from localStorage or browser language
     this.translationService.initLanguage();
   }

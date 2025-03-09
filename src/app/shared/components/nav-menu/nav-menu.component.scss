@@ -9,12 +9,12 @@
   width: 100%;
   z-index: 1000;
   pointer-events: none;
-  
+
   &.visible .nav-menu {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
   }
-  
+
   &:not(.visible) .nav-menu {
     opacity: 0;
     transform: translateX(-50%) translateY(20px);
@@ -49,13 +49,16 @@
   justify-content: center;
   text-decoration: none;
   color: v.$color-gray-darkest;
-  font-size: 0.75rem;
-  font-weight: 500;
   padding: 5px 0;
   position: relative;
   width: 20%;
   text-align: center;
   height: 100%;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 11px;
+  letter-spacing: 0;
+
   .nav-menu-text{
     min-height: 20px;
     line-height: .9;
@@ -63,7 +66,9 @@
 }
 
 .nav-item.active {
-  color: v.$color-red-dark;
+  font-weight: 900;
+  font-size: 13px;
+
 }
 
 .nav-icon {
