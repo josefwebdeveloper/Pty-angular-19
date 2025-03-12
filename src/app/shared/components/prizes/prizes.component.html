@@ -9,7 +9,7 @@
         <div appAnimateOnClick="jello-horizontal" class="prize-icon">
           <img [src]="prize.icon" [alt]="prize.title">
         </div>
-        <div class="prize-label">{{ prize.title }}</div>
+        <div [innerHTML]="prize.title" class="prize-label"></div>
       </div>
     }
   </div>

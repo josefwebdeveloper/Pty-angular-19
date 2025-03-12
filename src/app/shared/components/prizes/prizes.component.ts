@@ -46,7 +46,7 @@ export class PrizesComponent implements OnInit {
       delay: 200
     },
     {
-      title: 'Instant Win App Prizes',
+      title: 'Instant Win<br>App Prizes',
       icon: '/assets/cereal-prizes.svg',
       state: 'hidden',
       delay: 300
