@@ -35,7 +35,7 @@ export class PrizesComponent implements OnInit {
     },
     {
       title: 'Instant Win Prizes',
-      icon: '/assets/Money-pr.svg',
+      icon: '/assets/money2.svg',
       state: 'hidden',
       delay: 100
     },
@@ -47,7 +47,7 @@ export class PrizesComponent implements OnInit {
     },
     {
       title: 'Instant Win App Prizes',
-      icon: '/assets/prizes.svg',
+      icon: '/assets/cereal-prizes.svg',
       state: 'hidden',
       delay: 300
     }

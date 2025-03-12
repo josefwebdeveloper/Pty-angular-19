@@ -2,63 +2,84 @@
 @use "../../../../../public/assets/styles/functions" as *;
 
 .prizes-container {
-  //padding: get-rem(30) get-rem(16);
+  padding: 0 get-rem(32);
   text-align: center;
 }
 
 .prizes-title {
+  margin-left: get-rem(2.5);
   text-align: start;
   margin-bottom: get-rem(10);
   font-weight: 800;
   font-size: get-rem(22);
   line-height: get-rem(21);
   letter-spacing: 0;
-
+  color: #000000;
 }
 
 .prizes-subtitle {
-  margin-bottom: get-rem(30);
-  color: v.$color-gray-dark;
+  margin-left: get-rem(2.5);
   font-weight: 400;
   font-size: get-rem(16);
   line-height: get-rem(18);
-  letter-spacing: 0;
   text-align: start;
-
+  letter-spacing: 0.1px;
+  color: #000;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-style: normal;
+}
+.prizes-subtitle-second{
+  margin-left: get-rem(2.5);
+  margin-bottom: get-rem(24);
+  font-weight: 400;
+  font-size: get-rem(16);
+  line-height: get-rem(18);
+  text-align: start;
+  letter-spacing: get-rem(0.22);
+  color: #000;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-style: normal;
 }
 
 .prizes-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: get-rem(16);
-  max-width: get-rem(600);
+  grid-template-columns: get-rem(150) get-rem(150);
+  gap: get-rem(11.5);
   margin: 0 auto;
 }
 
 .prize-card {
-  background-color: v.$color-yellow;
-  border-radius: get-rem(12);
-  padding: get-rem(10);
+  width: get-rem(150);
+  height: get-rem(150);
+  padding: get-rem(10) get-rem(14);
+  background-color: #FFDC00;
+  border-radius: get-rem(15);
+  box-shadow: 0 0 get-rem(20) 0 rgba(0, 0, 0, 0.20) inset;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0 get-rem(4) get-rem(8) rgba(0, 0, 0, 0.1);
-  aspect-ratio: 1 / 1;
+  gap: get-rem(10);
   transition: transform 0.3s ease;
 
   &:hover {
     transform: translateY(get-rem(-5));
   }
-}
 
+
+}
+.prize-card:nth-child(2) , .prize-card:nth-child(3) {
+  background-color:  #FFB600;
+}
+.prize-card:nth-child(2){
+
+}
 .prize-icon {
-  width: 100%;
-  height: 65%;
+  width: 100px;
+  height: 83px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: get-rem(15);
+
 
   img {
     max-width: 100%;
@@ -66,12 +87,20 @@
     object-fit: contain;
   }
 }
-
+.prize-card:nth-child(4){
+  .prize-icon {
+    position: relative;
+    top: get-rem(8);
+    left: get-rem(-2);
+  }
+}
 .prize-label {
   font-weight: 800;
   font-size: get-rem(16);
   line-height: get-rem(18);
   letter-spacing: 0;
   text-align: center;
-
+  color: #000;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-style: normal;
 }

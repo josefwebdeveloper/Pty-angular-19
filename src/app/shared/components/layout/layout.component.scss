@@ -6,7 +6,7 @@
   flex-direction: column;
   min-height: 100vh;
   position: relative;
-  max-width: get-rem(480);
+  width: get-rem(375);
   margin: 0 auto;
   background-color: v.$color-white;
   box-shadow: 0 0 get-rem(15) v.$shadow-light;
